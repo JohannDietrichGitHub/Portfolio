@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 var modal = document.getElementById("myModal");
 
@@ -33,3 +34,6 @@ window.addEventListener("scroll", reveal);
 
 // To check the scroll position on page load
 reveal();
+=======
+alert("ok");
+>>>>>>> 133052e (mise en place des fichiers js css)
