@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 // Initialize the session
 session_start();
@@ -33,4 +34,13 @@ session_start();
   require_once('cv.php');
   ?>
   <a href="index.php">remonter</a>
+=======
+<head> 		
+    <meta charset="utf-8" /> <!--encodage en utf8-->
+	<title>Contact</title>
+</head>
+<body>
+Bonjour, ceci est un test pour github
+<div class="premier block titre"> PORTFOLIO JOHANN DIETRICH ! </div>
+>>>>>>> 21c54d3 (forme)
 </body>
