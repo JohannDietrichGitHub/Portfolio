@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 var modal = document.getElementById("myModal");
 
@@ -37,3 +38,6 @@ reveal();
 =======
 alert("ok");
 >>>>>>> 133052e (mise en place des fichiers js css)
+=======
+/* alert("ok"); */
+>>>>>>> 6caa6c9 (up)

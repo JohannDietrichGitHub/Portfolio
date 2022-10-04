@@ -43,6 +43,7 @@ session_start();
     <script src="..\JS\indexjs.js"></script>
 </head>
 <body>
+<<<<<<< HEAD
 Bonjour, ceci est un test pour github
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,6 +53,8 @@ Bonjour, ceci est un test pour github
 <div class="premierblocktitre"> PORTFOLIO JOHANN DIETRICH ! </div>
 >>>>>>> e1452f4 (upadte files)
 =======
+=======
+>>>>>>> 6caa6c9 (up)
 <div class="premierblocktitre"> PORTFOLIO JOHANN DIETRICH !</div>
 >>>>>>> 133052e (mise en place des fichiers js css)
 </body>

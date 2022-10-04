@@ -444,8 +444,30 @@ input{
 }
 =======
     color: aqua;
+
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e1452f4 (upadte files)
 =======
 >>>>>>> 133052e (mise en place des fichiers js css)
+=======
+
+
+/* Mise en place d'un élément bougeant */
+@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+@media (prefers-reduced-motion: no-preference) {
+    .premierblocktitre {
+      animation-name: wipe-enter;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+  }
+>>>>>>> 6caa6c9 (up)
