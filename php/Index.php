@@ -6,6 +6,5 @@
     <script src="..\JS\indexjs.js"></script>
 </head>
 <body>
-Bonjour, ceci est un test pour github
 <div class="premierblocktitre"> PORTFOLIO JOHANN DIETRICH !</div>
 </body>
