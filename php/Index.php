@@ -38,9 +38,14 @@ session_start();
 <head> 		
     <meta charset="utf-8" /> <!--encodage en utf8-->
 	<title>Contact</title>
+    <link rel="stylesheet" href="indexcss.css"/>
 </head>
 <body>
 Bonjour, ceci est un test pour github
+<<<<<<< HEAD
 <div class="premier block titre"> PORTFOLIO JOHANN DIETRICH ! </div>
 >>>>>>> 21c54d3 (forme)
+=======
+<div class="premierblocktitre"> PORTFOLIO JOHANN DIETRICH ! </div>
+>>>>>>> e1452f4 (upadte files)
 </body>
