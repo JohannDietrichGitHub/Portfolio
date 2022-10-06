@@ -44,6 +44,7 @@ session_start();
 </head>
 <body>
 <<<<<<< HEAD
+<<<<<<< HEAD
 Bonjour, ceci est un test pour github
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,6 +56,16 @@ Bonjour, ceci est un test pour github
 =======
 =======
 >>>>>>> 6caa6c9 (up)
+=======
+<div class="card text-center">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+  </div>
+</div>  
+>>>>>>> 8acedd0 (a)
 <div class="premierblocktitre"> PORTFOLIO JOHANN DIETRICH !</div>
 >>>>>>> 133052e (mise en place des fichiers js css)
 </body>
