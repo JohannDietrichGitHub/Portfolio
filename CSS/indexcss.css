@@ -1,8 +1,6 @@
 .premierblocktitre {
     color: aqua;
-
 }
-
 
 /* Mise en place d'un élément bougeant */
 @keyframes wipe-enter {
