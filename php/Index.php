@@ -45,6 +45,7 @@ session_start();
 <body>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Bonjour, ceci est un test pour github
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,4 +69,22 @@ Bonjour, ceci est un test pour github
 >>>>>>> 8acedd0 (a)
 <div class="premierblocktitre"> PORTFOLIO JOHANN DIETRICH !</div>
 >>>>>>> 133052e (mise en place des fichiers js css)
+=======
+  <?php
+    require_once ('navbar.php');
+  ?>
+  <div class="card text-center">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    </div>
+  </div>  
+  <div class="premierblocktitre"> PORTFOLIO JOHANN DIETRICH !</div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <?php
+    require_once ('formtest.php');
+  ?>
+>>>>>>> bbb0e2d (a)
 </body>
