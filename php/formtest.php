@@ -11,14 +11,15 @@ $conn = new mysqli('localhost','root','','test_portfolio');
 if($conn->connect_error){
     die("Connection failed : ". $conn->connect_error);
 }
-else echo "connection established";
-
 ?>
 <div id="myModal" class="modal">
-    <div class="container">
+    <div class="container1">
         <div class="color">
-
             <center>
+                <div class="annoncecontact">
+                    Si vous voulez me contacter, veuillez insérer les informations demandées ci-dessous et je vous joindrais aussi rapidement que possible !
+                </div>
+                <br>
                 <form action="Index.php" name="form" id="form" method="post">
 
                 <p>
@@ -38,6 +39,10 @@ else echo "connection established";
                     <input type="text" name="mail" id="mail" required>
                 </p>
                 <p>
+                    <label for="raison">raison:</label>
+                    <textarea name="raison" id="raison" required> </textarea>
+                </p>
+                <p>
                     <input type="submit" value="Submit">
                 </p>
                     <button class="close">fermer</button>
@@ -51,8 +56,9 @@ if (isset($_POST['prenom'])) {
     $prenom =  $_REQUEST['prenom'];
     $nom =  $_REQUEST['nom'];
     $mail =  $_REQUEST['mail'];
+    $raison =  $_REQUEST['raison'];
 
-    $sql = "INSERT INTO test VALUES ('0','$prenom','$nom','$mail')";
+    $sql = "INSERT INTO test VALUES ('0','$prenom','$nom','$mail','$raison')";
     mysqli_query($conn, $sql);
 }
 
@@ -71,7 +77,7 @@ if($result = $conn->query($sql)){
 
 ?>
  <br>
-<button id="myBtn">Open Modal</button>
+<button id="myBtn">contactez moi !</button>
 <script src="..\JS\indexjs.js"></script>
 
 </body>

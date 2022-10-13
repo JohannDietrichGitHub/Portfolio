@@ -12,16 +12,4 @@
   ?>
 </header>
 <body>
-<center><h1><div class="premierblocktitre"> PORTFOLIO JOHANN DIETRICH !</div></h1></center>
-  <br>
-  <section id="sec-1">
-  <div class="container">
-    <a href="#CV">
-      <div class="scroll-downn"></div>
-    </a>
-  </div>
-  </section>
-  <?php
-  require_once('cv.php');
-  ?>
 </body>

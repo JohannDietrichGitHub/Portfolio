@@ -9,19 +9,14 @@
 <header>
   <?php
     require_once ('navbar.php');
+
+    $conn = new mysqli('localhost','root','','test_portfolio');
+    if($conn->connect_error){
+        die("Connection failed : ". $conn->connect_error);
+    }
+    $username_err ="";
+    $password_err="";
   ?>
 </header>
 <body>
-<center><h1><div class="premierblocktitre"> PORTFOLIO JOHANN DIETRICH !</div></h1></center>
-  <br>
-  <section id="sec-1">
-  <div class="container">
-    <a href="#CV">
-      <div class="scroll-downn"></div>
-    </a>
-  </div>
-  </section>
-  <?php
-  require_once('cv.php');
-  ?>
 </body>
