@@ -1,6 +1,4 @@
 .premierblocktitre {
-<<<<<<< HEAD
-<<<<<<< HEAD
     color: goldenrod;
 } 
 body {
@@ -10,17 +8,10 @@ body {
 /* tout sur le modal du formulaire permettant le contact */
 .modal{
   display: hidden; /* Hidden by default */
-=======
-    color: goldenrod;
-}
-.modal{
-  display: none; /* Hidden by default */
->>>>>>> bbb0e2d (a)
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-<<<<<<< HEAD
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
@@ -450,55 +441,3 @@ input{
   border: 1px solid rgb(113, 132, 166) ;
   background-color: rgb(1, 0, 0);
 }
-=======
-    color: aqua;
-=======
-  width: 50%; /* Full width */
-  height: 50%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-.color {
-  background-color: rgb(241, 9, 203);
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.close {
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  background-color: rgb(241, 9, 203);
-
->>>>>>> bbb0e2d (a)
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e1452f4 (upadte files)
-=======
->>>>>>> 133052e (mise en place des fichiers js css)
-=======
-
-/* Mise en place d'un élément bougeant */
-/* @keyframes wipe-enter {
-	0% {
-		transform: scale(0, .025);
-	}
-	50% {
-		transform: scale(1, .025);
-	}
-}
-@media (prefers-reduced-motion: no-preference) {
-    .premierblocktitre {
-      animation-name: wipe-enter;
-      animation-duration: 1s;
-      animation-iteration-count: infinite;
-    }
-<<<<<<< HEAD
-  }
->>>>>>> 6caa6c9 (up)
-=======
-  } */
->>>>>>> bbb0e2d (a)
