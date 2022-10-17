@@ -1,3 +1,7 @@
+<?php
+// Initialize the session
+session_start();
+?>
 <head> 		
     <meta charset="utf-8" /> <!--encodage en utf8-->
 	<title>Contact</title>
@@ -9,6 +13,12 @@
 <header>
   <?php
     require_once ('navbar.php');
+    if(isset($_SESSION["username"]))  
+ {  
+      echo '<h3>connection réussie ! - '.$_SESSION["username"]. '</h3>'; 
+      echo '<a href="logout.php">Logout</a>';
+
+ }
   ?>
 </header>
 <body>

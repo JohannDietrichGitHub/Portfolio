@@ -8,7 +8,7 @@
         <a class="nav-item nav-link active" href="http://localhost:3000/php/docu.php""> Documentation</a>
         <a class="nav-item nav-link active" href="http://localhost:3000/php/articles.php"">Articles</a>
         <a class="nav-item nav-link active" href="http://localhost:3000/php/admin.php"">Admin</a>
-        <a class="nav-item nav-link active" href="http://localhost:3000/php/authentification.php"">Login</a>
+        <a class="nav-item nav-link active" href="http://localhost:3000/php/login.php"">Login</a>
 
         </div>
     </div>

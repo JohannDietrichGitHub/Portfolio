@@ -30,18 +30,37 @@ body {
   color: green;
   font-size: bold;
 }
-.close {
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  background-color: rgb(241, 9, 203);
+.fermer {
+  background-color: rgb(56, 199, 43) !important;
+  border: 0;
+  width: 40%;
+  margin-bottom: 1em;
+}
+
+/* Partie permettant la mise en page propre des formulaires */
+input, label {
+  display:block;
+}
+
+textarea {
+  display: block;
+  width: 40em;
+  height: 5em;
+  resize: none !important;
 }
 /* Fin du modal */
 
 
 
+
+
+
+
+/* Partie index permettatn animation css */
 .contindex {
   height: 200%;
 }
+
 
 
 
@@ -300,4 +319,7 @@ body {
 .titreproj, .titreproj:hover{
   color: yellowgreen ;
   text-decoration: underline black !important;
+}
+label{
+  color: whitesmoke;
 }

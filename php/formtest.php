@@ -23,8 +23,10 @@ if($conn->connect_error){
                 <form action="Index.php" name="form" id="form" method="post">
 
                 <p>
-                    <label for="prenom">prenom:</label>
-                    <input type="text" name="prenom" id="prenom" required>
+                    <div>
+                        <label for="prenom">prenom:</label>
+                        <input type="text" name="prenom" id="prenom" required>
+                    </div>
                 </p>
 
 
@@ -43,9 +45,11 @@ if($conn->connect_error){
                     <textarea name="raison" id="raison" required> </textarea>
                 </p>
                 <p>
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Envoyer">
                 </p>
-                    <button class="close">fermer</button>
+                <p>
+                    <button class="fermer">fermer</button>
+                </p>
                 </form>
             </center>
         </div>

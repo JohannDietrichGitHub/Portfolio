@@ -1,3 +1,7 @@
+<?php
+// Initialize the session
+session_start();
+?>
 <head> 		
     <meta charset="utf-8" /> <!--encodage en utf8-->
 	<title>Contact</title>

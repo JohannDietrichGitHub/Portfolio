@@ -1,3 +1,19 @@
+<?php
+$DB_host = "localhost";
+$DB_user = "root";
+$DB_pass = "";
+$DB_name = "test_portfolio";
+
+try
+{
+     $conn = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
+     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e)
+{
+     echo $e->getMessage();
+}
+?>
 <head> 		
     <meta charset="utf-8" /> <!--encodage en utf8-->
 	<title>Contact</title>
@@ -8,18 +24,13 @@
 
 
 <?php
-$conn = new mysqli('localhost','root','','test_portfolio');
-if($conn->connect_error){
-    die("Connection failed : ". $conn->connect_error);
-}
-$sql = "SELECT * FROM datacv";
-$result = $conn->query($sql);
-?> <br> <?php
-if($result = $conn->query($sql)){
-    while($temp = $result->fetch_object()){
-$experiences = $temp->experiences.' '.$presentation = $temp->presentation .' '.$competences = $temp->competences .' '.$diplomes = $temp->diplomes;
-}
-}
+/* Cherche dans la BDD les données a insérer dans le CV */
+$user = $conn->query("SELECT * FROM datacv ORDER BY id DESC LIMIT 1")->fetch();
+$experiences = $user[1];
+$presentation = $user[2];
+$competences = $user[3];
+$diplomes = $user[4];
+
 ?>
 
 
@@ -28,8 +39,7 @@ $experiences = $temp->experiences.' '.$presentation = $temp->presentation .' '.$
     require_once ('navbar.php');
   ?>
 </header>
-<body>
-
+<body> <!-- Blocs créants le CV et insérant les données de la BDD -->
     <div class="contindex"> </div>
       <section id="CV">
         <div class="container"> </div>
@@ -38,27 +48,23 @@ $experiences = $temp->experiences.' '.$presentation = $temp->presentation .' '.$
         <div class="cvprincipal"> 
           <div class="premiercontainercv"> 
             <div class="presentationgeneral"> présentation générale
-                <br>
-                <?php echo $presentation ?>
+                <br> <?php echo $presentation;?>
             </div>
             <div class="photo"> photo </div>
           </div>
           <div class="deuxiemecontainercv"> 
             <div class="contincontcv"> 
               <div class="diplome"> diplome
-                <br>
-                <?php echo $diplomes ?>
+                <br> <?php echo $diplomes;?>
               </div>
               <div class="experiences"> experiences
-                <br>
-              <?php echo $experiences ?>
+                <br> <?php echo $experiences;?>
               </div>
             </div>
             <div class="reseau">réseaux</div>
           </div>
           <div class="competences"> competences 
-          <br>
-                <?php echo $competences ?>
+             <br> <?php echo $competences;?>
           </div>
         </div>
         <?php

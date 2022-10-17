@@ -1,3 +1,21 @@
+<?php
+// Initialize the session
+session_start();
+$DB_host = "localhost";
+$DB_user = "root";
+$DB_pass = "";
+$DB_name = "test_portfolio";
+
+try
+{
+     $conn = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
+     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e)
+{
+     echo $e->getMessage();
+}
+?>
 <head> 		
     <meta charset="utf-8" /> <!--encodage en utf8-->
 	<title>Contact</title>
@@ -13,13 +31,14 @@
 </header>
 <body>
 <?php
-$conn = new mysqli('localhost','root','','test_portfolio');
-if($conn->connect_error){
-    die("Connection failed : ". $conn->connect_error);
-}
+
+
+if(isset($_SESSION["username"]))  
+ { 
+    if($_SESSION["droits"] == 1)
+    {
 ?>
     <center>
-
         <br>
         <form action="admin.php" name="form" id="form" method="post">   
         <p>
@@ -42,15 +61,29 @@ if($conn->connect_error){
             <input type="submit" value="Submit">
         </p>
         </form>
+        <a href="logout.php">Logout</a>
     </center>
+<?php 
+}
+else { 
+    ?>
+    <center><h1>Vous n'êtes pas administrateur et ne pouvez pas accéder cette page</h1> </center>
     <?php
-    if (isset($_POST['experiences'])) {
-        $experiences =  $_REQUEST['experiences'];
-        $presentation =  $_REQUEST['presentation'];
-        $competences =  $_REQUEST['competences'];
-        $diplomes =  $_REQUEST['diplomes'];
+    }
+}
 
-        $sql = "UPDATE datacv SET experiences = '".$experiences."', presentation = '".$presentation."', competences = '".$competences."', diplomes = '".$diplomes."' WHERE id = 1";
-        mysqli_query($conn, $sql);
-    } ?>
+else {
+    ?>
+    <center><h1>Veuillez vous connecter pour acceder a la page</h1> </center>
+    <?php
+}
+    if (isset($_POST['experiences'])) {
+        $experiences =  $_POST['experiences'];
+        $presentation =  $_POST['presentation'];
+        $competences =  $_POST['competences'];
+        $diplomes =  $_POST['diplomes'];
+
+        $sql = "UPDATE datacv SET experiences = ?, presentation = ?, competences = ?, diplomes = ? WHERE id = 1";
+        $conn->prepare($sql)->execute([$experiences, $presentation, $competences, $diplomes]);
+} ?>
 </body>
