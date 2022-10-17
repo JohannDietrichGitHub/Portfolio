@@ -30,10 +30,29 @@ body {
   font-size: bold;
 }
 .fermer {
+<<<<<<< HEAD
   background-color: rgb(113, 132, 166) !important;
   border: 0;
   width: 40%;
   margin-bottom: 1em;
+=======
+  background-color: rgb(56, 199, 43) !important;
+  border: 0;
+  width: 40%;
+  margin-bottom: 1em;
+}
+
+/* Partie permettant la mise en page propre des formulaires */
+input, label {
+  display:block;
+}
+
+textarea {
+  display: block;
+  width: 40em;
+  height: 5em;
+  resize: none !important;
+>>>>>>> 33485dd (Finition du système de login)
 }
 
 .contactezmoi {
@@ -79,6 +98,12 @@ input, label {
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 33485dd (Finition du système de login)
 /* Partie index permettatn animation css */
 .contindex {
   height: 100%;
@@ -88,6 +113,26 @@ input, label {
 
 
 
+<<<<<<< HEAD
+=======
+
+/* Mise en place d'un élément bougeant */
+/* @keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+@media (prefers-reduced-motion: no-preference) {
+    .premierblocktitre {
+      animation-name: wipe-enter;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+  } */
+>>>>>>> 33485dd (Finition du système de login)
 
 
 
@@ -274,6 +319,7 @@ input, label {
   color: yellowgreen ;
   text-decoration: underline black !important;
 }
+<<<<<<< HEAD
 .form_signup{
   width: 30%;
 }
@@ -440,4 +486,8 @@ input{
 .changeadmin{
   border: 1px solid rgb(113, 132, 166) ;
   background-color: rgb(1, 0, 0);
+=======
+label{
+  color: whitesmoke;
+>>>>>>> 33485dd (Finition du système de login)
 }

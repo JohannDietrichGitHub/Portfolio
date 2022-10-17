@@ -38,6 +38,7 @@ if(isset($_SESSION["username"]))
     if($_SESSION["droits"] == 1)
     {
 ?>
+<<<<<<< HEAD
 <div class="containeradmin">
     <div class="form_signup form-admin">
         <center><div class="formtitle">Modifier CV</div> </center>
@@ -91,6 +92,42 @@ else {
     }
 }
 
+=======
+    <center>
+        <br>
+        <form action="admin.php" name="form" id="form" method="post">   
+        <p>
+            <label for="experiences">experiences:</label>
+            <input type="text" name="experiences" id="experiences" required>
+        </p>    
+        <p>
+            <label for="presentation">presentation:</label>
+            <input type="text" name="presentation" id="presentation" required>
+        </p>    
+        <p>
+            <label for="competences">competences:</label>
+            <input type="text" name="competences" id="competences" required>
+        </p>
+        <p>
+            <label for="diplomes">diplomes:</label>
+            <input type="text" name="diplomes" id="diplomes" required>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+        </form>
+        <a href="logout.php">Logout</a>
+    </center>
+<?php 
+}
+else { 
+    ?>
+    <center><h1>Vous n'êtes pas administrateur et ne pouvez pas accéder cette page</h1> </center>
+    <?php
+    }
+}
+
+>>>>>>> 33485dd (Finition du système de login)
 else {
     ?>
     <center><h1>Veuillez vous connecter pour acceder a la page</h1> </center>

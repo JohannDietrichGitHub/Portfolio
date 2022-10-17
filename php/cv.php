@@ -40,6 +40,7 @@ $diplomes = $user[4];
   ?>
 </header>
 <body> <!-- Blocs créants le CV et insérant les données de la BDD -->
+<<<<<<< HEAD
 
     
     <div class="reveal">
@@ -49,22 +50,43 @@ $diplomes = $user[4];
         <div class="cvprincipal"> 
           <div class="premiercontainercv"> 
             <div class="presentationgeneral"> Présentation générale :
+=======
+    <div class="contindex"> </div>
+      <section id="CV">
+        <div class="container"> </div>
+        <center><h1><div>PARTIE CV</div></center></h1>
+
+        <div class="cvprincipal"> 
+          <div class="premiercontainercv"> 
+            <div class="presentationgeneral"> présentation générale
+>>>>>>> 33485dd (Finition du système de login)
                 <br> <?php echo $presentation;?>
             </div>
             <div class="photo"> Photo : </div>
           </div>
           <div class="deuxiemecontainercv"> 
             <div class="contincontcv"> 
+<<<<<<< HEAD
               <div class="diplome"> Diplomes :
                 <br> <?php echo $diplomes;?>
               </div>
               <div class="experiences"> Experiences :
+=======
+              <div class="diplome"> diplome
+                <br> <?php echo $diplomes;?>
+              </div>
+              <div class="experiences"> experiences
+>>>>>>> 33485dd (Finition du système de login)
                 <br> <?php echo $experiences;?>
               </div>
             </div>
             <div class="reseau">Réseaux :</div>
           </div>
+<<<<<<< HEAD
           <div class="competences"> Competences : 
+=======
+          <div class="competences"> competences 
+>>>>>>> 33485dd (Finition du système de login)
              <br> <?php echo $competences;?>
           </div>
         </div>

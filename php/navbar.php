@@ -8,6 +8,12 @@
         <a class="nav-item nav-link active" href="http://localhost:3000/php/index.php"">Accueil</a>
         <a class="nav-item nav-link active" href="http://localhost:3000/php/docu.php""> Documentation</a>
         <a class="nav-item nav-link active" href="http://localhost:3000/php/articles.php"">Articles</a>
+<<<<<<< HEAD
+=======
+        <a class="nav-item nav-link active" href="http://localhost:3000/php/admin.php"">Admin</a>
+        <a class="nav-item nav-link active" href="http://localhost:3000/php/login.php"">Login</a>
+
+>>>>>>> 33485dd (Finition du système de login)
         </div>
     </div>
     </nav>

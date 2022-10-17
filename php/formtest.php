@@ -30,6 +30,7 @@ catch(PDOException $e)
                 <div>Si vous voulez me contacter, veuillez insérer les informations demandées ci-dessous et je vous joindrais aussi rapidement que possible !</div> 
                 <br><br>
                 <form action="Index.php" name="form" id="form" method="post">
+<<<<<<< HEAD
                 <div class="form-group">
                     <label for="sujet">sujet</label>
                     <input type="text" class="form-control" id="sujet" name="sujet"  placeholder="sujet" required>
@@ -43,6 +44,37 @@ catch(PDOException $e)
                     <textarea class="form-control textraison" id="raison" name="raison"  required></textarea>
                  </div>
                 <button type="submit" class="btn btn-primary">Envoyer</button>
+=======
+
+                <p>
+                    <div>
+                        <label for="prenom">prenom:</label>
+                        <input type="text" name="prenom" id="prenom" required>
+                    </div>
+                </p>
+
+
+                <p>
+                    <label for="nom">nom:</label>
+                    <input type="text" name="nom" id="nom" required>
+                </p>
+
+
+                <p>
+                    <label for="mail">mail:</label>
+                    <input type="text" name="mail" id="mail" required>
+                </p>
+                <p>
+                    <label for="raison">raison:</label>
+                    <textarea name="raison" id="raison" required> </textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Envoyer">
+                </p>
+                <p>
+                    <button class="fermer">fermer</button>
+                </p>
+>>>>>>> 33485dd (Finition du système de login)
                 </form>
                 <div><button class="fermer">fermer</button></div>
             </div>
