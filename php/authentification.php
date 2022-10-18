@@ -31,7 +31,7 @@ catch(PDOException $e)
 </header>
 <body>
 <center>
-    Sign up 
+    <label>Sign up </label>
     <br><br><br>
     <form action="authentification.php" name="form" id="form" method="post">   
     <p>
@@ -86,6 +86,7 @@ if(isset($_POST['username'])){   /* vérifie si le formulaire a été envoyé */
             $mdphash = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $sql = "INSERT INTO users (username, mail, password) VALUES (?,?,?)";
             $conn->prepare($sql)->execute([$_POST['username'], $_POST['mail'], $mdphash]);
+            header("location:login.php");  
         }
     }
     else {

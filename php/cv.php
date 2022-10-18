@@ -43,27 +43,27 @@ $diplomes = $user[4];
     <div class="contindex"> </div>
       <section id="CV">
         <div class="container"> </div>
-        <center><h1><div>PARTIE CV</div></center></h1>
+        <center><h1><label>PARTIE CV</label></center></h1>
 
         <div class="cvprincipal"> 
           <div class="premiercontainercv"> 
-            <div class="presentationgeneral"> présentation générale
+            <div class="presentationgeneral"> Présentation générale :
                 <br> <?php echo $presentation;?>
             </div>
-            <div class="photo"> photo </div>
+            <div class="photo"> Photo : </div>
           </div>
           <div class="deuxiemecontainercv"> 
             <div class="contincontcv"> 
-              <div class="diplome"> diplome
+              <div class="diplome"> Diplomes :
                 <br> <?php echo $diplomes;?>
               </div>
-              <div class="experiences"> experiences
+              <div class="experiences"> Experiences :
                 <br> <?php echo $experiences;?>
               </div>
             </div>
-            <div class="reseau">réseaux</div>
+            <div class="reseau">Réseaux :</div>
           </div>
-          <div class="competences"> competences 
+          <div class="competences"> Competences : 
              <br> <?php echo $competences;?>
           </div>
         </div><div class="contactezmoi">

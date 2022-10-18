@@ -181,6 +181,7 @@ textarea {
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
+  color: azure;
 
 }
 .premiercontainercv {
@@ -192,6 +193,7 @@ textarea {
   align-items: center;
   background-color: black;
   margin: 0 0.5em 0.5em 0 ;
+  color: azure;
 }
 .photo{
   width: 30%;
@@ -215,18 +217,21 @@ textarea {
   width: 100%;
   background-color: black;
   margin-bottom: 1em;
+  color: azure;
 
 }
 .experiences{
   height: 50%;
   width: 100%;
   background-color: black;
+  color: azure;
 
 }
 .reseau{
   background-color: black;
   width: 30%;
   margin: 0.5em 0 0.5em 0.5em;
+  color: azure;
 
 }
 .competences{
@@ -234,6 +239,8 @@ textarea {
   height: 20%;
   background-color: black;
   margin: 0.5em 0 0 0;
+  color: azure;
+
 }
 
 

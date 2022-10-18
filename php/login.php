@@ -24,7 +24,7 @@ $DB_name = "test_portfolio";
 </header>
 <body>
 <center> <!-- formulaire de connection -->
-    Login  
+    <label>Login</label>  
     <br><br><br>
     <form action="login.php" name="form" id="form" method="post">   
     <p>
