@@ -54,18 +54,23 @@ $diplomes = $user[4];
     <div class="contindex"> </div>
       <section id="CV">
         <div class="container"> </div>
-        <center><h1><div>PARTIE CV</div></center></h1>
+        <center><h1><label>PARTIE CV</label></center></h1>
 
         <div class="cvprincipal"> 
           <div class="premiercontainercv"> 
+<<<<<<< HEAD
             <div class="presentationgeneral"> présentation générale
 >>>>>>> 33485dd (Finition du système de login)
+=======
+            <div class="presentationgeneral"> Présentation générale :
+>>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
                 <br> <?php echo $presentation;?>
             </div>
             <div class="photo"> Photo : </div>
           </div>
           <div class="deuxiemecontainercv"> 
             <div class="contincontcv"> 
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div class="diplome"> Diplomes :
                 <br> <?php echo $diplomes;?>
@@ -77,16 +82,26 @@ $diplomes = $user[4];
               </div>
               <div class="experiences"> experiences
 >>>>>>> 33485dd (Finition du système de login)
+=======
+              <div class="diplome"> Diplomes :
+                <br> <?php echo $diplomes;?>
+              </div>
+              <div class="experiences"> Experiences :
+>>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
                 <br> <?php echo $experiences;?>
               </div>
             </div>
             <div class="reseau">Réseaux :</div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div class="competences"> Competences : 
 =======
           <div class="competences"> competences 
 >>>>>>> 33485dd (Finition du système de login)
+=======
+          <div class="competences"> Competences : 
+>>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
              <br> <?php echo $competences;?>
           </div>
 <<<<<<< HEAD

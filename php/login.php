@@ -28,6 +28,7 @@ $DB_name = "test_portfolio";
 <body>
 <center> <!-- formulaire de connection -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class="form_signup form-login">
     <div class="formtitle">Se connecter</div> 
     <br><br>
@@ -58,6 +59,9 @@ $DB_name = "test_portfolio";
                 if (password_verify($_POST["password"], $passwd[0]))
 =======
     Login  
+=======
+    <label>Login</label>  
+>>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
     <br><br><br>
     <form action="login.php" name="form" id="form" method="post">   
     <p>

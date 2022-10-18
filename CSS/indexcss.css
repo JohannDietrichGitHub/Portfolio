@@ -220,7 +220,11 @@ input, label {
 .experiences{
   height: 50%;
   width: 100%;
+<<<<<<< HEAD
   border: 1px solid rgb(113, 132, 166);
+=======
+  background-color: black;
+>>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
   color: azure;
 
 }

@@ -32,6 +32,7 @@ catch(PDOException $e)
 <body>
 <center>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="form_signup form-login">
         <div class="formtitle">Créer un compte</div> 
         <br><br>
@@ -58,6 +59,9 @@ catch(PDOException $e)
     </div>
 =======
     Sign up 
+=======
+    <label>Sign up </label>
+>>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
     <br><br><br>
     <form action="authentification.php" name="form" id="form" method="post">   
     <p>
@@ -147,6 +151,7 @@ if(isset($_POST['username'])){   /* vérifie si le formulaire a été envoyé */
             $sql = "INSERT INTO users (username, mail, password) VALUES (?,?,?)";
             $conn->prepare($sql)->execute([$_POST['username'], $_POST['mail'], $mdphash]);
             header("location:login.php");  
+<<<<<<< HEAD
 =======
         $sql = "INSERT INTO users (username, mail, password) VALUES (?,?,?)";
         $conn->prepare($sql)->execute([$_POST['username'], $_POST['mail'], $_POST['password']]);
@@ -161,6 +166,8 @@ if(isset($_POST['username'])){   /* vérifie si le formulaire a été envoyé */
             $sql = "INSERT INTO users (username, mail, password) VALUES (?,?,?)";
             $conn->prepare($sql)->execute([$_POST['username'], $_POST['mail'], $mdphash]);
 >>>>>>> 1e9d5a7 (Finition du système empêchant 2 même noms d'utilistaeurs/adresses mail)
+=======
+>>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
         }
     }
     else {
