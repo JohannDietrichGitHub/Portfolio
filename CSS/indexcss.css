@@ -22,19 +22,26 @@ body {
   width: 50%;
 }
 .color {
-  background-color: yellowgreen;
+  background-color: rgb(4, 53, 83);
 }
 .annoncecontact {
   font-size: 1.3em;
   border: 2px solid rgb(0, 0, 0); 
-  color: green;
+  color: rgb(113, 132, 166);
   font-size: bold;
 }
 .fermer {
-  background-color: rgb(56, 199, 43) !important;
+  background-color: rgb(113, 132, 166) !important;
   border: 0;
   width: 40%;
   margin-bottom: 1em;
+}
+
+.contactezmoi {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 1em;
 }
 
 /* Partie permettant la mise en page propre des formulaires */
@@ -48,6 +55,8 @@ textarea {
   height: 5em;
   resize: none !important;
 }
+
+
 /* Fin du modal */
 
 

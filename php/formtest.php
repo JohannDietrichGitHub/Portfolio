@@ -1,3 +1,20 @@
+<?php
+// Initialize the session
+$DB_host = "localhost";
+$DB_user = "root";
+$DB_pass = "";
+$DB_name = "test_portfolio";
+
+try
+{
+     $conn = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
+     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e)
+{
+     echo $e->getMessage();
+}
+?>
 <head> 		
     <meta charset="utf-8" /> <!--encodage en utf8-->
 	<title>Contact</title>
@@ -6,12 +23,6 @@
 </head>
 <body>
 
-<?php
-$conn = new mysqli('localhost','root','','test_portfolio');
-if($conn->connect_error){
-    die("Connection failed : ". $conn->connect_error);
-}
-?>
 <div id="myModal" class="modal">
     <div class="container1">
         <div class="color">
@@ -23,19 +34,9 @@ if($conn->connect_error){
                 <form action="Index.php" name="form" id="form" method="post">
 
                 <p>
-                    <div>
-                        <label for="prenom">prenom:</label>
-                        <input type="text" name="prenom" id="prenom" required>
-                    </div>
+                        <label for="sujet">sujet:</label>
+                        <input type="text" name="sujet" id="sujet" required>
                 </p>
-
-
-                <p>
-                    <label for="nom">nom:</label>
-                    <input type="text" name="nom" id="nom" required>
-                </p>
-
-
                 <p>
                     <label for="mail">mail:</label>
                     <input type="text" name="mail" id="mail" required>
@@ -56,28 +57,15 @@ if($conn->connect_error){
     </div>
 </div>
 <?php
-if (isset($_POST['prenom'])) {
-    $prenom =  $_REQUEST['prenom'];
-    $nom =  $_REQUEST['nom'];
-    $mail =  $_REQUEST['mail'];
-    $raison =  $_REQUEST['raison'];
+if (isset($_POST['sujet'])) {
+    $sujet =  $_POST['sujet'];
+    $mail =  $_POST['mail'];
+    $raison =  $_POST['raison'];
 
-    $sql = "INSERT INTO test VALUES ('0','$prenom','$nom','$mail','$raison')";
-    mysqli_query($conn, $sql);
+    $sql = "INSERT INTO contact (id, sujet, mail, raison) VALUES (?,?,?,?)";
+    $conn->prepare($sql)->execute([null, $sujet, $mail, $raison]);
 }
 
-
-
-
-
-$sql = "SELECT * FROM test";
-$result = $conn->query($sql);
-?> <br> <?php
-if($result = $conn->query($sql)){
-    while($utilisateur = $result->fetch_object()){
-        echo $utilisateur->prenom.' '.$utilisateur->nom;
-    }
-}
 
 ?>
  <br>

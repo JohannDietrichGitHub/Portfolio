@@ -47,17 +47,28 @@ try
      $conn = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if(isset($_POST["username"]))  
-          {    
-                $query = "SELECT * FROM users WHERE username = :username AND password = :password";  /* Verifie si le nom d'utilisateur et le mot de passe sont existants dans la BDD et si c'est le cas, commence la session */
-                $statement = $conn->prepare($query);  
-                $statement->execute(  
-                    array(  
-                          'username'     =>     $_POST["username"],  
-                          'password'     =>     $_POST["password"]  
-                     )  
-                );  
-                $count = $statement->rowCount();  
-                if($count > 0)  
+          {     
+                $query = 'SELECT * FROM users WHERE (username = :username)';
+
+                /* Values array for PDO. */
+                $values = [':username' => $_POST["username"]];
+                
+                /* Execute the query */
+                try
+                {
+                  $res = $conn->prepare($query);
+                  $res->execute($values);
+                }
+                catch (PDOException $e)
+                {
+                  /* Query error. */
+                  echo 'Query error.';
+                  die();
+                }
+                
+                $row = $res->fetch(PDO::FETCH_ASSOC);
+
+                if (password_verify($_POST["password"], $row['password']))
                 {    
                      $stmt = $conn->prepare("SELECT * FROM users WHERE username = :username"); /* permet de chercher la colone"droits" determinant si un utilisateur est administrateur ou non */
                      $stmt->execute(['username' => $_POST["username"]]); 

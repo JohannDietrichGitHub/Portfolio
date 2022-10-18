@@ -69,8 +69,9 @@ if(isset($_POST['username'])){   /* vérifie si le formulaire a été envoyé */
             echo "nom d'utilisateur ou adresse mail déja utilisés";
         }
         else {
+        $mdphash = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $sql = "INSERT INTO users (username, mail, password) VALUES (?,?,?)";
-        $conn->prepare($sql)->execute([$_POST['username'], $_POST['mail'], $_POST['password']]);
+        $conn->prepare($sql)->execute([$_POST['username'], $_POST['mail'], $mdphash]);
         }
     }
     else {
