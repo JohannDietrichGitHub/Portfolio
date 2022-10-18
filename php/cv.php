@@ -89,8 +89,12 @@ $diplomes = $user[4];
 >>>>>>> 33485dd (Finition du système de login)
              <br> <?php echo $competences;?>
           </div>
+<<<<<<< HEAD
         </div>
         <div class="contactezmoi">
+=======
+        </div><div class="contactezmoi">
+>>>>>>> b929ed8 (Remise en place du formulaire de contact)
         <?php
           require_once ('formtest.php');
         ?></div>

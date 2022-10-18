@@ -47,19 +47,9 @@ catch(PDOException $e)
 =======
 
                 <p>
-                    <div>
-                        <label for="prenom">prenom:</label>
-                        <input type="text" name="prenom" id="prenom" required>
-                    </div>
+                        <label for="sujet">sujet:</label>
+                        <input type="text" name="sujet" id="sujet" required>
                 </p>
-
-
-                <p>
-                    <label for="nom">nom:</label>
-                    <input type="text" name="nom" id="nom" required>
-                </p>
-
-
                 <p>
                     <label for="mail">mail:</label>
                     <input type="text" name="mail" id="mail" required>

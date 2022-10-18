@@ -80,6 +80,7 @@ try
      $conn = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if(isset($_POST["username"]))  
+<<<<<<< HEAD
           {    
                 $query = "SELECT * FROM users WHERE username = :username AND password = :password";  /* Verifie si le nom d'utilisateur et le mot de passe sont existants dans la BDD et si c'est le cas, commence la session */
                 $statement = $conn->prepare($query);  
@@ -92,6 +93,30 @@ try
                 $count = $statement->rowCount();  
                 if($count > 0)  
 >>>>>>> 33485dd (Finition du système de login)
+=======
+          {     
+                $query = 'SELECT * FROM users WHERE (username = :username)';
+
+                /* Values array for PDO. */
+                $values = [':username' => $_POST["username"]];
+                
+                /* Execute the query */
+                try
+                {
+                  $res = $conn->prepare($query);
+                  $res->execute($values);
+                }
+                catch (PDOException $e)
+                {
+                  /* Query error. */
+                  echo 'Query error.';
+                  die();
+                }
+                
+                $row = $res->fetch(PDO::FETCH_ASSOC);
+
+                if (password_verify($_POST["password"], $row['password']))
+>>>>>>> b929ed8 (Remise en place du formulaire de contact)
                 {    
                      $stmt = $conn->prepare("SELECT * FROM users WHERE username = :username"); /* permet de chercher la colone"droits" determinant si un utilisateur est administrateur ou non */
                      $stmt->execute(['username' => $_POST["username"]]); 
