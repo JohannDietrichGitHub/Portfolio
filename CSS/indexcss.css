@@ -130,6 +130,7 @@ input, label {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 /* Mise en place d'un élément bougeant */
 /* @keyframes wipe-enter {
 	0% {
@@ -147,6 +148,8 @@ input, label {
     }
   } */
 >>>>>>> 33485dd (Finition du système de login)
+=======
+>>>>>>> 492a0c7 (test d'apparition d'objets en scroll)
 
 
 
@@ -161,7 +164,10 @@ input, label {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 492a0c7 (test d'apparition d'objets en scroll)
 
 
 
@@ -509,3 +515,134 @@ label{
   color: whitesmoke;
 >>>>>>> 33485dd (Finition du système de login)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Test annimations de scroll */
+.imagindex{
+  margin-top: 5em;
+  border: 1px solid black;
+}
+.reveal{
+  margin-right: 1em;
+  display: flex;
+  align-content: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* Mise en place d'un élément bougeant */
+/* @keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+@media (prefers-reduced-motion: no-preference) {
+    .premierblocktitre {
+      animation-name: wipe-enter;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+  } */
+
+  /* test scroll down anim */
+
+
+
+  section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .scroll-downn {
+    height: 90px;
+    width: 50px;
+    border: 2px solid yellow;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+
+  }
+  .scroll-downn::before,
+  .scroll-downn::after {
+    content: "";
+    border: 2px solid rgb(30, 175, 239);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    
+    animation: scroll-down 1s ease-in-out infinite;
+  }
+  .scroll-downn::before {
+    top: 30%;
+    animation-delay: 0.3s;
+    /* animation: scroll-down 1s ease-in-out infinite; */
+  }
+
+  
+  @keyframes scroll-down {
+    0% {
+      /* top:20%; */
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      top: 90%;
+      opacity: 0;
+    }
+  }
+  

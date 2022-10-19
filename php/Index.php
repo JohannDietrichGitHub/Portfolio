@@ -28,6 +28,12 @@ session_start();
     </a>
   </div>
   </section>
+  <div class="reveal">
+    <div class="imagindex"><img src="..\pirate.jpg" alt="Hacking"></div><br>
+  </div>
+  <div class="reveal">
+    <label>TEST APARITUS</label>
+  </div>
   <?php
   require_once('pres.php');
   require_once('cv.php');
