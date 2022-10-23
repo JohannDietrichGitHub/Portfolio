@@ -79,11 +79,10 @@ $DB_name = "test_portfolio";
     <div><a href="authentification.php">Pas encore de compte ?</a></div>
 </center>
 <?php
-try
-{
      $conn = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if(isset($_POST["username"]))  
+<<<<<<< HEAD
 <<<<<<< HEAD
           {    
                 $query = "SELECT * FROM users WHERE username = :username AND password = :password";  /* Verifie si le nom d'utilisateur et le mot de passe sont existants dans la BDD et si c'est le cas, commence la session */
@@ -121,6 +120,15 @@ try
 
                 if (password_verify($_POST["password"], $row['password']))
 >>>>>>> b929ed8 (Remise en place du formulaire de contact)
+=======
+    {          
+            $stmt = $conn->prepare("SELECT password FROM users WHERE username=?");
+            $stmt->execute([$_POST["username"]]); 
+            $passwd = $stmt->fetch();
+
+            if ($passwd !=null){
+                if (password_verify($_POST["password"], $passwd[0]))
+>>>>>>> b0cc7db (Re mise en place de la navbar)
                 {    
                      $stmt = $conn->prepare("SELECT * FROM users WHERE username = :username"); /* permet de chercher la colone"droits" determinant si un utilisateur est administrateur ou non */
                      $stmt->execute(['username' => $_POST["username"]]); 
@@ -140,6 +148,7 @@ try
                 }  
                 else  
                 {  
+<<<<<<< HEAD
 <<<<<<< HEAD
                      echo "Mauvais mot de passe ou nom d'utilisateur";
                 }
@@ -163,6 +172,16 @@ catch(PDOException $e)
      echo $e->getMessage();
 }
 >>>>>>> 33485dd (Finition du système de login)
+=======
+                     echo "Mauvais mot de passe ou nom d'utilisateur";
+                }
+            }
+            else 
+                {
+                    echo "Nom d'utilisateur inconnu";
+                }
+        } 
+>>>>>>> b0cc7db (Re mise en place de la navbar)
 
 ?>
 </body>

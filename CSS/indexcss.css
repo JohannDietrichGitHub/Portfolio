@@ -100,13 +100,17 @@ input, label {
 .navperso1 {
   background-color: rgb(113, 132, 166)!important;
   width: 15%;
+<<<<<<< HEAD
   display: flex;
   justify-self: flex-end;
+=======
+>>>>>>> b0cc7db (Re mise en place de la navbar)
 }
 .assemblagenavbar{
   display: flex;
   width: 100%;
 }
+<<<<<<< HEAD
 .inexist {
   visibility: hidden;
 }
@@ -118,6 +122,10 @@ input, label {
 
 
 >>>>>>> 33485dd (Finition du système de login)
+=======
+
+
+>>>>>>> b0cc7db (Re mise en place de la navbar)
 /* Partie index permettatn animation css */
 .contindex {
   height: 100%;
