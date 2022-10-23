@@ -41,11 +41,15 @@ $diplomes = $user[4];
 </header>
 <body> <!-- Blocs créants le CV et insérant les données de la BDD -->
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 80f19c4 (affichage pourle cv)
 
     
     <div class="reveal">
       <section id="reveal CV ">
         <center><h1><label>CV</label></center></h1>
+<<<<<<< HEAD
 
         <div class="cvprincipal"> 
           <div class="premiercontainercv"> 
@@ -55,6 +59,8 @@ $diplomes = $user[4];
       <section id="CV">
         <div class="container"> </div>
         <center><h1><label>PARTIE CV</label></center></h1>
+=======
+>>>>>>> 80f19c4 (affichage pourle cv)
 
         <div class="cvprincipal"> 
           <div class="premiercontainercv"> 
