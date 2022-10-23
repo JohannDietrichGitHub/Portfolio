@@ -40,10 +40,11 @@ $diplomes = $user[4];
   ?>
 </header>
 <body> <!-- Blocs créants le CV et insérant les données de la BDD -->
-    <div class="contindex"> </div>
-      <section id="CV">
-        <div class="container"> </div>
-        <center><h1><label>PARTIE CV</label></center></h1>
+
+    
+    <div class="reveal">
+      <section id="reveal CV ">
+        <center><h1><label>CV</label></center></h1>
 
         <div class="cvprincipal"> 
           <div class="premiercontainercv"> 
@@ -71,4 +72,5 @@ $diplomes = $user[4];
           require_once ('formtest.php');
         ?></div>
         </section>
+    </div>
 </body>
