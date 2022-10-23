@@ -42,33 +42,16 @@ $DB_name = "test_portfolio";
     <div><a href="authentification.php">Pas encore de compte ?</a></div>
 </center>
 <?php
-try
-{
      $conn = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if(isset($_POST["username"]))  
-          {     
-                $query = 'SELECT * FROM users WHERE (username = :username)';
+    {          
+            $stmt = $conn->prepare("SELECT password FROM users WHERE username=?");
+            $stmt->execute([$_POST["username"]]); 
+            $passwd = $stmt->fetch();
 
-                /* Values array for PDO. */
-                $values = [':username' => $_POST["username"]];
-                
-                /* Execute the query */
-                try
-                {
-                  $res = $conn->prepare($query);
-                  $res->execute($values);
-                }
-                catch (PDOException $e)
-                {
-                  /* Query error. */
-                  echo 'Query error.';
-                  die();
-                }
-                
-                $row = $res->fetch(PDO::FETCH_ASSOC);
-
-                if (password_verify($_POST["password"], $row['password']))
+            if ($passwd !=null){
+                if (password_verify($_POST["password"], $passwd[0]))
                 {    
                      $stmt = $conn->prepare("SELECT * FROM users WHERE username = :username"); /* permet de chercher la colone"droits" determinant si un utilisateur est administrateur ou non */
                      $stmt->execute(['username' => $_POST["username"]]); 
@@ -81,18 +64,14 @@ try
                 }  
                 else  
                 {  
-                     $message = '<label>Wrong Data</label>';  
-                }    
+                     echo "Mauvais mot de passe ou nom d'utilisateur";
+                }
             }
-        }   
-        catch(PDOException $error)  
-        {  
-             $message = $error->getMessage();  
-        }  
-catch(PDOException $e)
-{
-     echo $e->getMessage();
-}
+            else 
+                {
+                    echo "Nom d'utilisateur inconnu";
+                }
+        } 
 
 ?>
 </body>

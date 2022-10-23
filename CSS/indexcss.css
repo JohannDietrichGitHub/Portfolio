@@ -60,14 +60,23 @@ textarea {
 /* Fin du modal */
 
 
-
-
-
+.navperso {
+  background-color: rgb(113, 132, 166)!important;
+  width: 100%;
+}
+.navperso1 {
+  background-color: rgb(113, 132, 166)!important;
+  width: 15%;
+}
+.assemblagenavbar{
+  display: flex;
+  width: 100%;
+}
 
 
 /* Partie index permettatn animation css */
 .contindex {
-  height: 200%;
+  height: 100%;
 }
 
 
