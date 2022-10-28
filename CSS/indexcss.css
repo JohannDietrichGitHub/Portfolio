@@ -101,16 +101,24 @@ input, label {
   background-color: rgb(113, 132, 166)!important;
   width: 15%;
 <<<<<<< HEAD
+<<<<<<< HEAD
   display: flex;
   justify-self: flex-end;
 =======
 >>>>>>> b0cc7db (Re mise en place de la navbar)
+=======
+  display: flex;
+  justify-self: flex-end;
+>>>>>>> 2c131bd (Mise en place du font et embellissement général)
 }
 .assemblagenavbar{
   display: flex;
   width: 100%;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2c131bd (Mise en place du font et embellissement général)
 .inexist {
   visibility: hidden;
 }
@@ -352,6 +360,9 @@ input, label {
   text-decoration: underline black !important;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2c131bd (Mise en place du font et embellissement général)
 .form_signup{
   width: 30%;
 }
@@ -365,6 +376,7 @@ label, div, button {
   color: white;
   font-family: 'Roboto', sans-serif;
 
+<<<<<<< HEAD
 }
 input{
   width: 60% !important;
@@ -522,6 +534,8 @@ input{
 label{
   color: whitesmoke;
 >>>>>>> 33485dd (Finition du système de login)
+=======
+>>>>>>> 2c131bd (Mise en place du font et embellissement général)
 }
 
 

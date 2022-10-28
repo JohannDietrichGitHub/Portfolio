@@ -111,11 +111,16 @@ $diplomes = $user[4];
              <br> <?php echo $competences;?>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
         <div class="contactezmoi">
 =======
         </div><div class="contactezmoi">
 >>>>>>> b929ed8 (Remise en place du formulaire de contact)
+=======
+        </div>
+        <div class="contactezmoi">
+>>>>>>> 2c131bd (Mise en place du font et embellissement général)
         <?php
           require_once ('formtest.php');
         ?></div>

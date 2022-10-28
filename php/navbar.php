@@ -27,6 +27,9 @@
             if(isset($_SESSION["username"]))  
             {   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2c131bd (Mise en place du font et embellissement général)
                 if($_SESSION["droits"] == 1){
                     ?><a class="nav-item nav-link active" href="http://localhost:3000/php/admin.php"">Admin</a><?php //permet de voir la page admin uniquement si on l'es
                 }
@@ -34,11 +37,14 @@
             else {
                 ?> <a class="nav-item nav-link active inexist" href="http://localhost:3000/php/admin.php"">admin</a> <?php //permet simplement un meilleur alignement de la navbar
             }?>
+<<<<<<< HEAD
 =======
                 if($_SESSION["droits"] == 1){?>
             <a class="nav-item nav-link active" href="http://localhost:3000/php/admin.php"">Admin</a>
             <?php } }?>
 >>>>>>> b0cc7db (Re mise en place de la navbar)
+=======
+>>>>>>> 2c131bd (Mise en place du font et embellissement général)
             <a class="nav-item nav-link active" href="http://localhost:3000/php/login.php"">Se connecter</a>
         </div>
         </div>

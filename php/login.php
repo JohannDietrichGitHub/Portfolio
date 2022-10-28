@@ -29,12 +29,17 @@ $DB_name = "test_portfolio";
 <center> <!-- formulaire de connection -->
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class="form_signup form-login">
+=======
+<div class="form_signup">
+>>>>>>> 2c131bd (Mise en place du font et embellissement général)
     <div class="formtitle">Se connecter</div> 
     <br><br>
     <form action="login.php" name="form" id="form" method="post">
     <div class="form-group">
         <label for="username">Nom d'utilisateur</label>
+<<<<<<< HEAD
         <input type="text" class="form-control" id="username" name="username"  placeholder="Nom d'utilisateur" required>
      </div>
     <div class="form-group">
@@ -75,8 +80,18 @@ $DB_name = "test_portfolio";
     <p>
         <input type="submit" value="se connecter">
     </p>
+=======
+        <input type="email" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Nom d'utilisateur">
+     </div>
+    <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe">
+    </div>
+    <button type="submit" class="btn btn-primary">Se connecter</button>
+>>>>>>> 2c131bd (Mise en place du font et embellissement général)
     </form>
     <div><a href="authentification.php">Pas encore de compte ?</a></div>
+</div>
 </center>
 <?php
      $conn = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);

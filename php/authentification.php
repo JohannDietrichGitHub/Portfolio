@@ -33,6 +33,7 @@ catch(PDOException $e)
 <center>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="form_signup form-login">
         <div class="formtitle">Créer un compte</div> 
         <br><br>
@@ -62,6 +63,9 @@ catch(PDOException $e)
 =======
     <label>Sign up </label>
 >>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
+=======
+    Sign up
+>>>>>>> 2c131bd (Mise en place du font et embellissement général)
     <br><br><br>
     <form action="authentification.php" name="form" id="form" method="post">   
     <p>

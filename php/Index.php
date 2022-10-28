@@ -29,11 +29,12 @@ session_start();
   </div>
   </section>
   <div class="reveal">
-    <div class="imagindex"><img src="..\pirate.jpg" alt="Hacking"></div><br>
+    <div class="imagindex"><img src="..\images\pirate.jpg" alt="Hacking"></div><br>
   </div>
   <div class="reveal">
     <label>TEST APARITUS</label>
   </div>
+  <div class="contindex "> </div>
   <?php
   require_once('pres.php');
   require_once('cv.php');
