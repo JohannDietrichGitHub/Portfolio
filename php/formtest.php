@@ -69,7 +69,7 @@ if (isset($_POST['sujet'])) {
 
 ?>
  <br>
-<button id="myBtn">contactez moi !</button>
+<button id="myBtn" class="btn btn-primary">contactez moi !</button>
 <script src="..\JS\indexjs.js"></script>
 
 </body>

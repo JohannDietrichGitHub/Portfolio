@@ -67,7 +67,8 @@ $diplomes = $user[4];
           <div class="competences"> Competences : 
              <br> <?php echo $competences;?>
           </div>
-        </div><div class="contactezmoi">
+        </div>
+        <div class="contactezmoi">
         <?php
           require_once ('formtest.php');
         ?></div>

@@ -24,22 +24,22 @@ $DB_name = "test_portfolio";
 </header>
 <body>
 <center> <!-- formulaire de connection -->
-    <label>Login</label>  
-    <br><br><br>
-    <form action="login.php" name="form" id="form" method="post">   
-    <p>
-        <label for="username">username:</label>
-        <input type="text" name="username" id="username" required>
-    </p>    
-    <p>
-        <label for="password">password:</label>
-        <input type="password" name="password" id="password" required>
-    </p>
-    <p>
-        <input type="submit" value="se connecter">
-    </p>
+<div class="form_signup">
+    <div class="formtitle">Se connecter</div> 
+    <br><br>
+    <form action="login.php" name="form" id="form" method="post">
+    <div class="form-group">
+        <label for="username">Nom d'utilisateur</label>
+        <input type="email" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Nom d'utilisateur">
+     </div>
+    <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe">
+    </div>
+    <button type="submit" class="btn btn-primary">Se connecter</button>
     </form>
     <div><a href="authentification.php">Pas encore de compte ?</a></div>
+</div>
 </center>
 <?php
      $conn = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);

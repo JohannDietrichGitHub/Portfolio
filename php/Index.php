@@ -8,6 +8,9 @@ session_start();
     <link rel="stylesheet" href="..\CSS\indexcss.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="..\JS\indexjs.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <header>
@@ -26,11 +29,12 @@ session_start();
   </div>
   </section>
   <div class="reveal">
-    <div class="imagindex"><img src="..\pirate.jpg" alt="Hacking"></div><br>
+    <div class="imagindex"><img src="..\images\pirate.jpg" alt="Hacking"></div><br>
   </div>
   <div class="reveal">
     <label>TEST APARITUS</label>
   </div>
+  <div class="contindex "> </div>
   <?php
   require_once('cv.php');
   ?>

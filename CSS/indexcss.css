@@ -3,6 +3,7 @@
 } 
 body {
   background-color: rgb(65, 65, 65) !important;
+  width: 100%;
 }
 /* tout sur le modal du formulaire permettant le contact */
 .modal{
@@ -67,10 +68,15 @@ textarea {
 .navperso1 {
   background-color: rgb(113, 132, 166)!important;
   width: 15%;
+  display: flex;
+  justify-self: flex-end;
 }
 .assemblagenavbar{
   display: flex;
   width: 100%;
+}
+.inexist {
+  visibility: hidden;
 }
 
 
@@ -269,8 +275,19 @@ textarea {
   color: yellowgreen ;
   text-decoration: underline black !important;
 }
-label{
-  color: whitesmoke;
+.form_signup{
+  width: 30%;
+}
+.formtitle{
+  color: white;
+font-size: 2em;
+font-family: 'Roboto', sans-serif;
+
+}
+label, div, button {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 

@@ -31,7 +31,7 @@ catch(PDOException $e)
 </header>
 <body>
 <center>
-    <label>Sign up </label>
+    Sign up
     <br><br><br>
     <form action="authentification.php" name="form" id="form" method="post">   
     <p>
