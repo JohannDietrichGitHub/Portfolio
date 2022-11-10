@@ -31,29 +31,30 @@ catch(PDOException $e)
 </header>
 <body>
 <center>
-    Sign up
-    <br><br><br>
-    <form action="authentification.php" name="form" id="form" method="post">   
-    <p>
-        <label for="username">username:</label>
-        <input type="text" name="username" id="username" required>
-    </p>    
-    <p>
-        <label for="mail">adresse mail:</label>
-        <input type="text" name="mail" id="mail" required>
-    </p>   
-    <p>
-        <label for="password">password:</label>
-        <input type="password" name="password" id="password" required>
-    </p>
-    <p>
-        <label for="confpassword">confirm password:</label>
-        <input type="password" name="confpassword" id="confpassword" required>
-    </p>
-    <p>
-        <input type="submit" value="S'enregistrer">
-    </p>
-    <div><a href="login.php">Déja un compte ?</a></div>
+    <div class="form_signup form-login">
+        <div class="formtitle">Créer un compte</div> 
+        <br><br>
+        <form action="authentification.php" name="form" id="form" method="post">
+        <div class="form-group">
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" class="form-control" id="username" name="username"  placeholder="Nom d'utilisateur" required>
+         </div>
+         <div class="form-group">
+            <label for="mail">Adresse mail :</label>
+            <input type="mail" class="form-control" id="mail" name="mail"  placeholder="mail" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Mot de passe :</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" required>
+        </div>
+        <div class="form-group">
+            <label for="confpassword">Confirmation du mot de passe :</label>
+            <input type="password" class="form-control" id="confpassword" name="confpassword" placeholder="Confirmation de mot de passe" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Créer un compte</button>
+        </form>
+        <div><a href="login.php">Déja un compte ?</a></div>
+    </div>
 </center>
 <?php
 

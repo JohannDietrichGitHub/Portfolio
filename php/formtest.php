@@ -25,35 +25,29 @@ catch(PDOException $e)
 
 <div id="myModal" class="modal">
     <div class="container1">
-        <div class="color">
             <center>
-                <div class="annoncecontact">
-                    Si vous voulez me contacter, veuillez insérer les informations demandées ci-dessous et je vous joindrais aussi rapidement que possible !
-                </div>
-                <br>
+            <div class="form_signup form-login">
+                <div>Si vous voulez me contacter, veuillez insérer les informations demandées ci-dessous et je vous joindrais aussi rapidement que possible !</div> 
+                <br><br>
                 <form action="Index.php" name="form" id="form" method="post">
-
-                <p>
-                        <label for="sujet">sujet:</label>
-                        <input type="text" name="sujet" id="sujet" required>
-                </p>
-                <p>
-                    <label for="mail">mail:</label>
-                    <input type="text" name="mail" id="mail" required>
-                </p>
-                <p>
-                    <label for="raison">raison:</label>
-                    <textarea name="raison" id="raison" required> </textarea>
-                </p>
-                <p>
-                    <input type="submit" value="Envoyer">
-                </p>
-                <p>
-                    <button class="fermer">fermer</button>
-                </p>
+                <div class="form-group">
+                    <label for="sujet">sujet</label>
+                    <input type="text" class="form-control" id="sujet" name="sujet"  placeholder="sujet" required>
+                 </div>
+                 <div class="form-group">
+                    <label for="mail">mail</label>
+                    <input type="mail" class="form-control" id="mail" name="mail"  placeholder="mail" required>
+                 </div>
+                 <div class="form-group">
+                    <label for="raison">raison</label>
+                    <textarea class="form-control textraison" id="raison" name="raison"  required></textarea>
+                 </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
                 </form>
+                <div><button class="fermer">fermer</button></div>
+            </div>
             </center>
-        </div>
+        
     </div>
 </div>
 <?php

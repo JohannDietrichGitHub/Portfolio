@@ -17,11 +17,9 @@ body {
   background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
 }
 .container1 {
-  margin-top: 10%;
-  margin-left: 25%;
-  margin-right: 25%;
-  width: 50%;
+  margin-top: 15em;
 }
+
 .color {
   background-color: rgb(4, 53, 83);
 }
@@ -50,10 +48,11 @@ input, label {
   display:block;
 }
 
-textarea {
+.textraison{
+  width: 80% !important;
   display: block;
   width: 40em;
-  height: 5em;
+  height: 10em;
   resize: none !important;
 }
 
@@ -130,13 +129,13 @@ textarea {
 .presentationgeneral {
   width: 70%;
   align-items: center;
-  background-color: black;
+  border: 1px solid rgb(113, 132, 166);
   margin: 0 0.5em 0.5em 0 ;
   color: azure;
 }
 .photo{
   width: 30%;
-  background-color: black;
+  border: 1px solid rgb(113, 132, 166);
   margin: 0 0 0.5em 0.5em ;
 }
 .deuxiemecontainercv {
@@ -154,7 +153,7 @@ textarea {
 .diplome{
   height: 50%;
   width: 100%;
-  background-color: black;
+  border: 1px solid rgb(113, 132, 166);
   margin-bottom: 1em;
   color: azure;
 
@@ -162,12 +161,12 @@ textarea {
 .experiences{
   height: 50%;
   width: 100%;
-  background-color: black;
+  border: 1px solid rgb(113, 132, 166);
   color: azure;
 
 }
 .reseau{
-  background-color: black;
+  border: 1px solid rgb(113, 132, 166);
   width: 30%;
   margin: 0.5em 0 0.5em 0.5em;
   color: azure;
@@ -176,7 +175,7 @@ textarea {
 .competences{
   width: 100%;
   height: 20%;
-  background-color: black;
+  border: 1px solid rgb(113, 132, 166);
   margin: 0.5em 0 0 0;
   color: azure;
 
@@ -289,7 +288,14 @@ label, div, button {
   font-family: 'Roboto', sans-serif;
 
 }
-
+input{
+  width: 60% !important;
+}
+.form-login{
+  margin-top: 3em;
+  border: 1px solid rgb(113, 132, 166) ;
+  background-color: rgb(1, 0, 0);
+}
 
 
 
@@ -324,12 +330,11 @@ label, div, button {
 .imagindex{
   margin-top: 5em;
   border: 1px solid black;
+  margin-bottom: 20em;
 }
 .reveal{
   margin-right: 1em;
   display: flex;
-  align-content: flex-end;
-  justify-content: flex-end;
   position: relative;
   transform: translateY(150px);
   opacity: 0;

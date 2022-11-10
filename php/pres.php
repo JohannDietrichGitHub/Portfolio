@@ -1,7 +1,3 @@
-<?php
-// Initialize the session
-session_start();
-?>
 <head> 		
     <meta charset="utf-8" /> <!--encodage en utf8-->
 	<title>Contact</title>
@@ -19,18 +15,8 @@ session_start();
   ?>
 </header>
 <body>
-<center><h1><div class="premierblocktitre"> PORTFOLIO JOHANN DIETRICH !</div></h1></center>
-  <br>
-  <section id="sec-1">
-  <div class="container">
-    <a href="#CV">
-      <div class="scroll-downn"></div>
-    </a>
+
+<div class="reveal">
+    <div class="imagindex"><img src="..\images\pirate.jpg" alt="Hacking"></div><br>
   </div>
-  </section>
-  <?php
-  require_once('pres.php');
-  require_once('cv.php');
-  ?>
-  <a href="index.php">remonter</a>
 </body>
