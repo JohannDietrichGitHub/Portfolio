@@ -94,29 +94,30 @@ else {
 
 =======
     <center>
-        <br>
-        <form action="admin.php" name="form" id="form" method="post">   
-        <p>
-            <label for="experiences">experiences:</label>
-            <input type="text" name="experiences" id="experiences" required>
-        </p>    
-        <p>
-            <label for="presentation">presentation:</label>
-            <input type="text" name="presentation" id="presentation" required>
-        </p>    
-        <p>
-            <label for="competences">competences:</label>
-            <input type="text" name="competences" id="competences" required>
-        </p>
-        <p>
-            <label for="diplomes">diplomes:</label>
-            <input type="text" name="diplomes" id="diplomes" required>
-        </p>
-        <p>
-            <input type="submit" value="Submit">
-        </p>
+    <div class="form_signup form-login">
+        <div class="formtitle">Modifier CV</div> 
+        <br><br>
+        <form action="admin.php" name="form" id="form" method="post">
+        <div class="form-group">
+            <label for="experiences">experiences</label>
+            <input type="text" class="form-control" id="experiences" name="experiences"  placeholder="experiences" required>
+        </div>
+        <div class="form-group">
+            <label for="presentation">presentation</label>
+            <input type="text" class="form-control" id="presentation" name="presentation"  placeholder="presentation" required>
+         </div>
+         <div class="form-group">
+            <label for="competences">competences</label>
+            <input type="text" class="form-control" id="competences" name="competences"  placeholder="competences" required >
+         </div>
+         <div class="form-group">
+            <label for="diplomes">diplomes</label>
+            <input type="text" class="form-control" id="diplomes" name="diplomes"  placeholder="diplomes" required>
+         </div>
+        <button type="submit" class="btn btn-primary">Modifier</button>
         </form>
         <a href="logout.php">Logout</a>
+    </div>
     </center>
 <?php 
 }

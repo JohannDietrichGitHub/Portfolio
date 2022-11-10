@@ -31,6 +31,9 @@ catch(PDOException $e)
                 <br><br>
                 <form action="Index.php" name="form" id="form" method="post">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a691bc7 (Finalisation du visuel des formulaires actuels)
                 <div class="form-group">
                     <label for="sujet">sujet</label>
                     <input type="text" class="form-control" id="sujet" name="sujet"  placeholder="sujet" required>
@@ -44,6 +47,7 @@ catch(PDOException $e)
                     <textarea class="form-control textraison" id="raison" name="raison"  required></textarea>
                  </div>
                 <button type="submit" class="btn btn-primary">Envoyer</button>
+<<<<<<< HEAD
 =======
 
                 <p>
@@ -65,6 +69,8 @@ catch(PDOException $e)
                     <button class="fermer">fermer</button>
                 </p>
 >>>>>>> 33485dd (Finition du système de login)
+=======
+>>>>>>> a691bc7 (Finalisation du visuel des formulaires actuels)
                 </form>
                 <div><button class="fermer">fermer</button></div>
             </div>

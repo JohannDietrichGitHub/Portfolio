@@ -58,10 +58,11 @@ input, label {
   display:block;
 }
 
-textarea {
+.textraison{
+  width: 80% !important;
   display: block;
   width: 40em;
-  height: 5em;
+  height: 10em;
   resize: none !important;
 >>>>>>> 33485dd (Finition du système de login)
 }
@@ -243,10 +244,14 @@ input, label {
   height: 50%;
   width: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
   border: 1px solid rgb(113, 132, 166);
 =======
   background-color: black;
 >>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
+=======
+  border: 1px solid rgb(113, 132, 166);
+>>>>>>> a691bc7 (Finalisation du visuel des formulaires actuels)
   color: azure;
 
 }
@@ -537,7 +542,14 @@ label{
 =======
 >>>>>>> 2c131bd (Mise en place du font et embellissement général)
 }
-
+input{
+  width: 60% !important;
+}
+.form-login{
+  margin-top: 3em;
+  border: 1px solid rgb(113, 132, 166) ;
+  background-color: rgb(1, 0, 0);
+}
 
 
 
@@ -572,12 +584,11 @@ label{
 .imagindex{
   margin-top: 5em;
   border: 1px solid black;
+  margin-bottom: 20em;
 }
 .reveal{
   margin-right: 1em;
   display: flex;
-  align-content: flex-end;
-  justify-content: flex-end;
   position: relative;
   transform: translateY(150px);
   opacity: 0;

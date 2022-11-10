@@ -34,6 +34,9 @@ catch(PDOException $e)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a691bc7 (Finalisation du visuel des formulaires actuels)
     <div class="form_signup form-login">
         <div class="formtitle">Créer un compte</div> 
         <br><br>
@@ -58,6 +61,7 @@ catch(PDOException $e)
         </form>
         <div><a href="login.php">Déja un compte ?</a></div>
     </div>
+<<<<<<< HEAD
 =======
     Sign up 
 =======
@@ -89,6 +93,8 @@ catch(PDOException $e)
     </p>
     <div><a href="login.php">Déja un compte ?</a></div>
 >>>>>>> 33485dd (Finition du système de login)
+=======
+>>>>>>> a691bc7 (Finalisation du visuel des formulaires actuels)
 </center>
 <?php
 

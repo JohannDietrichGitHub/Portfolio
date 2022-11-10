@@ -30,16 +30,23 @@ $DB_name = "test_portfolio";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class="form_signup form-login">
 =======
 <div class="form_signup">
 >>>>>>> 2c131bd (Mise en place du font et embellissement général)
+=======
+<div class="form_signup form-login">
+>>>>>>> a691bc7 (Finalisation du visuel des formulaires actuels)
     <div class="formtitle">Se connecter</div> 
     <br><br>
     <form action="login.php" name="form" id="form" method="post">
     <div class="form-group">
         <label for="username">Nom d'utilisateur</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a691bc7 (Finalisation du visuel des formulaires actuels)
         <input type="text" class="form-control" id="username" name="username"  placeholder="Nom d'utilisateur" required>
      </div>
     <div class="form-group">
