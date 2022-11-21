@@ -18,8 +18,6 @@ $DB_name = "test_portfolio";
 <header>
   <?php
     require_once ('navbar.php');
-
-    
   ?>
 </header>
 <body>
@@ -59,6 +57,10 @@ $DB_name = "test_portfolio";
                      $droits = $user[4];
                      $_SESSION["username"] = $_POST["username"]; /* Crée les variables de sessions permettant donc de confirmer la connection et plus */
                      $_SESSION["droits"] = $droits;
+
+                     //creation de logs
+                     $sql = "INSERT INTO logs (username, actions, pages) VALUES (?,?,?)";
+                     $conn->prepare($sql)->execute([$_POST['username'], "Login", "login.php"]);
 
                      header("location:articles.php");  
                 }  

@@ -38,9 +38,9 @@ if(isset($_SESSION["username"]))
     if($_SESSION["droits"] == 1)
     {
 ?>
-    <center>
-    <div class="form_signup form-login">
-        <div class="formtitle">Modifier CV</div> 
+<div class="containeradmin">
+    <div class="form_signup form-admin">
+        <center><div class="formtitle">Modifier CV</div> </center>
         <br><br>
         <form action="admin.php" name="form" id="form" method="post">
         <div class="form-group">
@@ -59,11 +59,29 @@ if(isset($_SESSION["username"]))
             <label for="diplomes">diplomes</label>
             <input type="text" class="form-control" id="diplomes" name="diplomes"  placeholder="diplomes" required>
          </div>
-        <button type="submit" class="btn btn-primary">Modifier</button>
+         <br>
+         <center><button type="submit" class="btn btn-primary">Modifier</button></center>
         </form>
-        <a href="logout.php">Logout</a>
+        <center><a href="logout.php">Se déconnecter</a></center>
     </div>
-    </center>
+    <div class="changeadmin">
+        <center><div class="formtitle">Modifier administrateurs</div> </center>
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php 
 }
 else { 

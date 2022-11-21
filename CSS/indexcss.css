@@ -425,3 +425,19 @@ input{
     }
   }
   
+
+
+/*  Partie s'occupant de la mise en forme des éléments sur la page admin */
+.containeradmin{
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-around;
+}
+.form-admin{
+  border: 1px solid rgb(113, 132, 166) ;
+  background-color: rgb(1, 0, 0);
+}
+.changeadmin{
+  border: 1px solid rgb(113, 132, 166) ;
+  background-color: rgb(1, 0, 0);
+}
