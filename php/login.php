@@ -19,10 +19,13 @@ $DB_name = "test_portfolio";
   <?php
     require_once ('navbar.php');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     
 >>>>>>> 33485dd (Finition du système de login)
+=======
+>>>>>>> 33786bd (Début de création de logs)
   ?>
 </header>
 <body>
@@ -160,12 +163,18 @@ $DB_name = "test_portfolio";
                      $_SESSION["droits"] = $droits;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 33786bd (Début de création de logs)
                      //creation de logs
                      $sql = "INSERT INTO logs (username, actions, pages) VALUES (?,?,?)";
                      $conn->prepare($sql)->execute([$_POST['username'], "Login", "login.php"]);
 
+<<<<<<< HEAD
 =======
 >>>>>>> 33485dd (Finition du système de login)
+=======
+>>>>>>> 33786bd (Début de création de logs)
                      header("location:articles.php");  
                 }  
                 else  
