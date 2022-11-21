@@ -3,13 +3,6 @@ var modal = document.getElementById("myModal");
 
 var btn = document.getElementById("myBtn");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-// Get the <span> element that closes the modal
->>>>>>> 33485dd (Finition du système de login)
-=======
->>>>>>> a691bc7 (Finalisation du visuel des formulaires actuels)
 var span = document.getElementsByClassName("fermer")[0];
 
 btn.onclick = function() {

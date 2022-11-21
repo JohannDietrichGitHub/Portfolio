@@ -31,12 +31,6 @@ catch(PDOException $e)
 </header>
 <body>
 <center>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a691bc7 (Finalisation du visuel des formulaires actuels)
     <div class="form_signup form-login">
         <div class="formtitle">Créer un compte</div> 
         <br><br>
@@ -61,47 +55,11 @@ catch(PDOException $e)
         </form>
         <div><a href="login.php">Déja un compte ?</a></div>
     </div>
-<<<<<<< HEAD
-=======
-    Sign up 
-=======
-    <label>Sign up </label>
->>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
-=======
-    Sign up
->>>>>>> 2c131bd (Mise en place du font et embellissement général)
-    <br><br><br>
-    <form action="authentification.php" name="form" id="form" method="post">   
-    <p>
-        <label for="username">username:</label>
-        <input type="text" name="username" id="username" required>
-    </p>    
-    <p>
-        <label for="mail">adresse mail:</label>
-        <input type="text" name="mail" id="mail" required>
-    </p>   
-    <p>
-        <label for="password">password:</label>
-        <input type="password" name="password" id="password" required>
-    </p>
-    <p>
-        <label for="confpassword">confirm password:</label>
-        <input type="password" name="confpassword" id="confpassword" required>
-    </p>
-    <p>
-        <input type="submit" value="S'enregistrer">
-    </p>
-    <div><a href="login.php">Déja un compte ?</a></div>
->>>>>>> 33485dd (Finition du système de login)
-=======
->>>>>>> a691bc7 (Finalisation du visuel des formulaires actuels)
 </center>
 <?php
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 if(isset($_POST['username'])){   /* vérifie si le formulaire a été envoyé */
 
     $stmt = $conn->prepare("SELECT username FROM users WHERE username=:username");
@@ -121,63 +79,15 @@ if(isset($_POST['username'])){   /* vérifie si le formulaire a été envoyé */
     }
     else { $mailbdd = $user[0]; }
 
-=======
-
-$usernamebdd = $mailbdd = ""; /* a changer, doit chercher dans bdd si ils existent ou pas */
-
-if(isset($_POST['username'])){   /* vérifie si le formulaire a été envoyé */
-
->>>>>>> 33485dd (Finition du système de login)
-=======
-if(isset($_POST['username'])){   /* vérifie si le formulaire a été envoyé */
-
-    $stmt = $conn->prepare("SELECT username FROM users WHERE username=:username");
-    $stmt->execute(['username' => $_POST["username"]]); 
-    $user = $stmt->fetch();
-    if (empty($user)){
-        $usernamebdd = "";
-    }
-    else { $usernamebdd = $user[0]; }
-
-
-    $stmt = $conn->prepare("SELECT mail FROM users WHERE mail=:mail");
-    $stmt->execute(['mail' => $_POST["mail"]]); 
-    $user = $stmt->fetch();
-    if (empty($user)){
-        $mailbdd = "";
-    }
-    else { $mailbdd = $user[0]; }
-
->>>>>>> 1e9d5a7 (Finition du système empêchant 2 même noms d'utilistaeurs/adresses mail)
     if($_POST['password']== $_POST['confpassword']){ /* vérifie si les mots de passes sont les memes */
         if ($_POST['username']== $usernamebdd || $_POST['mail']== $mailbdd) {  /* vérifie si le nom d'utilisateur ou l'adresse mail ne sont pas déja utilisés */
             echo "nom d'utilisateur ou adresse mail déja utilisés";
         }
         else {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             $mdphash = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $sql = "INSERT INTO users (username, mail, password) VALUES (?,?,?)";
             $conn->prepare($sql)->execute([$_POST['username'], $_POST['mail'], $mdphash]);
             header("location:login.php");  
-<<<<<<< HEAD
-=======
-        $sql = "INSERT INTO users (username, mail, password) VALUES (?,?,?)";
-        $conn->prepare($sql)->execute([$_POST['username'], $_POST['mail'], $_POST['password']]);
->>>>>>> 33485dd (Finition du système de login)
-=======
-        $mdphash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-        $sql = "INSERT INTO users (username, mail, password) VALUES (?,?,?)";
-        $conn->prepare($sql)->execute([$_POST['username'], $_POST['mail'], $mdphash]);
->>>>>>> b929ed8 (Remise en place du formulaire de contact)
-=======
-            $mdphash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-            $sql = "INSERT INTO users (username, mail, password) VALUES (?,?,?)";
-            $conn->prepare($sql)->execute([$_POST['username'], $_POST['mail'], $mdphash]);
->>>>>>> 1e9d5a7 (Finition du système empêchant 2 même noms d'utilistaeurs/adresses mail)
-=======
->>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
         }
     }
     else {

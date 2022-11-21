@@ -30,17 +30,7 @@ body {
   font-size: bold;
 }
 .fermer {
-<<<<<<< HEAD
-<<<<<<< HEAD
   background-color: rgb(113, 132, 166) !important;
-  border: 0;
-  width: 40%;
-  margin-bottom: 1em;
-=======
-  background-color: rgb(56, 199, 43) !important;
-=======
-  background-color: rgb(113, 132, 166) !important;
->>>>>>> b929ed8 (Remise en place du formulaire de contact)
   border: 0;
   width: 40%;
   margin-bottom: 1em;
@@ -64,32 +54,8 @@ input, label {
   width: 40em;
   height: 10em;
   resize: none !important;
->>>>>>> 33485dd (Finition du système de login)
 }
 
-<<<<<<< HEAD
-.contactezmoi {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  margin-top: 1em;
-}
-
-/* Partie permettant la mise en page propre des formulaires */
-input, label {
-  display:block;
-}
-
-.textraison{
-  width: 80% !important;
-  display: block;
-  width: 40em;
-  height: 10em;
-  resize: none !important;
-}
-
-=======
->>>>>>> b929ed8 (Remise en place du formulaire de contact)
 
 /* Fin du modal */
 
@@ -101,40 +67,18 @@ input, label {
 .navperso1 {
   background-color: rgb(113, 132, 166)!important;
   width: 15%;
-<<<<<<< HEAD
-<<<<<<< HEAD
   display: flex;
   justify-self: flex-end;
-=======
->>>>>>> b0cc7db (Re mise en place de la navbar)
-=======
-  display: flex;
-  justify-self: flex-end;
->>>>>>> 2c131bd (Mise en place du font et embellissement général)
 }
 .assemblagenavbar{
   display: flex;
   width: 100%;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2c131bd (Mise en place du font et embellissement général)
 .inexist {
   visibility: hidden;
 }
 
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 33485dd (Finition du système de login)
-=======
-
-
->>>>>>> b0cc7db (Re mise en place de la navbar)
 /* Partie index permettatn animation css */
 .contindex {
   height: 100%;
@@ -144,29 +88,6 @@ input, label {
 
 
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-/* Mise en place d'un élément bougeant */
-/* @keyframes wipe-enter {
-	0% {
-		transform: scale(0, .025);
-	}
-	50% {
-		transform: scale(1, .025);
-	}
-}
-@media (prefers-reduced-motion: no-preference) {
-    .premierblocktitre {
-      animation-name: wipe-enter;
-      animation-duration: 1s;
-      animation-iteration-count: infinite;
-    }
-  } */
->>>>>>> 33485dd (Finition du système de login)
-=======
->>>>>>> 492a0c7 (test d'apparition d'objets en scroll)
 
 
 
@@ -181,10 +102,7 @@ input, label {
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 492a0c7 (test d'apparition d'objets en scroll)
 
 
 
@@ -243,15 +161,7 @@ input, label {
 .experiences{
   height: 50%;
   width: 100%;
-<<<<<<< HEAD
-<<<<<<< HEAD
   border: 1px solid rgb(113, 132, 166);
-=======
-  background-color: black;
->>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
-=======
-  border: 1px solid rgb(113, 132, 166);
->>>>>>> a691bc7 (Finalisation du visuel des formulaires actuels)
   color: azure;
 
 }
@@ -364,10 +274,6 @@ input, label {
   color: yellowgreen ;
   text-decoration: underline black !important;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2c131bd (Mise en place du font et embellissement général)
 .form_signup{
   width: 30%;
 }
@@ -381,166 +287,6 @@ label, div, button {
   color: white;
   font-family: 'Roboto', sans-serif;
 
-<<<<<<< HEAD
-}
-input{
-  width: 60% !important;
-}
-.form-login{
-  margin-top: 3em;
-  border: 1px solid rgb(113, 132, 166) ;
-  background-color: rgb(1, 0, 0);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Test annimations de scroll */
-.imagindex{
-  margin-top: 5em;
-  border: 1px solid black;
-  margin-bottom: 20em;
-}
-.reveal{
-  margin-right: 1em;
-  display: flex;
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: 1s all ease;
-}
-.reveal.active{
-  transform: translateY(0);
-  opacity: 1;
-}
-
-
-/* Mise en place d'un élément bougeant */
-/* @keyframes wipe-enter {
-	0% {
-		transform: scale(0, .025);
-	}
-	50% {
-		transform: scale(1, .025);
-	}
-}
-@media (prefers-reduced-motion: no-preference) {
-    .premierblocktitre {
-      animation-name: wipe-enter;
-      animation-duration: 1s;
-      animation-iteration-count: infinite;
-    }
-  } */
-
-  /* test scroll down anim */
-
-
-
-  section {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .scroll-downn {
-    height: 90px;
-    width: 50px;
-    border: 2px solid yellow;
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    border-radius: 50px;
-    cursor: pointer;
-
-  }
-  .scroll-downn::before,
-  .scroll-downn::after {
-    content: "";
-    border: 2px solid rgb(30, 175, 239);
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    height: 10px;
-    width: 10px;
-    transform: translate(-50%, -100%) rotate(45deg);
-    border-top: transparent;
-    border-left: transparent;
-    
-    animation: scroll-down 1s ease-in-out infinite;
-  }
-  .scroll-downn::before {
-    top: 30%;
-    animation-delay: 0.3s;
-    /* animation: scroll-down 1s ease-in-out infinite; */
-  }
-
-  
-  @keyframes scroll-down {
-    0% {
-      /* top:20%; */
-      opacity: 0;
-    }
-    30% {
-      opacity: 1;
-    }
-    60% {
-      opacity: 1;
-    }
-    100% {
-      top: 90%;
-      opacity: 0;
-    }
-  }
-  
-
-
-/*  Partie s'occupant de la mise en forme des éléments sur la page admin */
-.containeradmin{
-  margin-top: 5em;
-  display: flex;
-  justify-content: space-around;
-}
-.form-admin{
-  border: 1px solid rgb(113, 132, 166) ;
-  background-color: rgb(1, 0, 0);
-}
-.changeadmin{
-  border: 1px solid rgb(113, 132, 166) ;
-  background-color: rgb(1, 0, 0);
-=======
-label{
-  color: whitesmoke;
->>>>>>> 33485dd (Finition du système de login)
-=======
->>>>>>> 2c131bd (Mise en place du font et embellissement général)
 }
 input{
   width: 60% !important;

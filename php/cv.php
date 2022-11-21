@@ -40,87 +40,35 @@ $diplomes = $user[4];
   ?>
 </header>
 <body> <!-- Blocs créants le CV et insérant les données de la BDD -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 80f19c4 (affichage pourle cv)
 
     
     <div class="reveal">
       <section id="reveal CV ">
         <center><h1><label>CV</label></center></h1>
-<<<<<<< HEAD
 
         <div class="cvprincipal"> 
           <div class="premiercontainercv"> 
             <div class="presentationgeneral"> Présentation générale :
-=======
-    <div class="contindex"> </div>
-      <section id="CV">
-        <div class="container"> </div>
-        <center><h1><label>PARTIE CV</label></center></h1>
-=======
->>>>>>> 80f19c4 (affichage pourle cv)
-
-        <div class="cvprincipal"> 
-          <div class="premiercontainercv"> 
-<<<<<<< HEAD
-            <div class="presentationgeneral"> présentation générale
->>>>>>> 33485dd (Finition du système de login)
-=======
-            <div class="presentationgeneral"> Présentation générale :
->>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
                 <br> <?php echo $presentation;?>
             </div>
             <div class="photo"> Photo : </div>
           </div>
           <div class="deuxiemecontainercv"> 
             <div class="contincontcv"> 
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div class="diplome"> Diplomes :
                 <br> <?php echo $diplomes;?>
               </div>
               <div class="experiences"> Experiences :
-=======
-              <div class="diplome"> diplome
-                <br> <?php echo $diplomes;?>
-              </div>
-              <div class="experiences"> experiences
->>>>>>> 33485dd (Finition du système de login)
-=======
-              <div class="diplome"> Diplomes :
-                <br> <?php echo $diplomes;?>
-              </div>
-              <div class="experiences"> Experiences :
->>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
                 <br> <?php echo $experiences;?>
               </div>
             </div>
             <div class="reseau">Réseaux :</div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div class="competences"> Competences : 
-=======
-          <div class="competences"> competences 
->>>>>>> 33485dd (Finition du système de login)
-=======
-          <div class="competences"> Competences : 
->>>>>>> 769682e (Petit fixage de couleur de texte pour certaines pages)
              <br> <?php echo $competences;?>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         </div>
         <div class="contactezmoi">
-=======
-        </div><div class="contactezmoi">
->>>>>>> b929ed8 (Remise en place du formulaire de contact)
-=======
-        </div>
-        <div class="contactezmoi">
->>>>>>> 2c131bd (Mise en place du font et embellissement général)
         <?php
           require_once ('formtest.php');
         ?></div>
