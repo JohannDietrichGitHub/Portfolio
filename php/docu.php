@@ -1,6 +1,5 @@
 <?php
-// Initialize the session
-session_start();
+require_once('connection.php');
 ?>
 <head> 		
     <meta charset="utf-8" /> <!--encodage en utf8-->

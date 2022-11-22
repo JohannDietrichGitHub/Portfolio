@@ -1,11 +1,5 @@
 <?php
-// Initialize the session
-session_start();
-$DB_host = "localhost";
-$DB_user = "root";
-$DB_pass = "";
-$DB_name = "test_portfolio";
-
+require_once('connection.php');
 ?>
 <head> 		
     <meta charset="utf-8" /> <!--encodage en utf8-->
