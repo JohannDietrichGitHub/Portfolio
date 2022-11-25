@@ -19,7 +19,7 @@ require_once('connection.php');
     <div class="form_signup form-login">
         <div class="formtitle">Créer un compte</div> 
         <br><br>
-        <form action="authentification.php" name="form" id="form" method="post">
+        <form action='creation_compte.php' name="form" id="form" method="post">
         <div class="form-group">
             <label for="username">Nom d'utilisateur :</label>
             <input type="text" class="form-control" id="username" name="username"  placeholder="Nom d'utilisateur" required>
@@ -41,43 +41,4 @@ require_once('connection.php');
         <div><a href="login.php">Déja un compte ?</a></div>
     </div>
 </center>
-<?php
-
-
-
-if(isset($_POST['username'])){   /* vérifie si le formulaire a été envoyé */
-
-    $stmt = $conn->prepare("SELECT username FROM users WHERE username=:username");
-    $stmt->execute(['username' => $_POST["username"]]); 
-    $user = $stmt->fetch();
-    if (empty($user)){
-        $usernamebdd = "";
-    }
-    else { $usernamebdd = $user[0]; }
-
-
-    $stmt = $conn->prepare("SELECT mail FROM users WHERE mail=:mail");
-    $stmt->execute(['mail' => $_POST["mail"]]); 
-    $user = $stmt->fetch();
-    if (empty($user)){
-        $mailbdd = "";
-    }
-    else { $mailbdd = $user[0]; }
-
-    if($_POST['password']== $_POST['confpassword']){ /* vérifie si les mots de passes sont les memes */
-        if ($_POST['username']== $usernamebdd || $_POST['mail']== $mailbdd) {  /* vérifie si le nom d'utilisateur ou l'adresse mail ne sont pas déja utilisés */
-            echo "nom d'utilisateur ou adresse mail déja utilisés";
-        }
-        else {
-            $mdphash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-            $sql = "INSERT INTO users (username, mail, password) VALUES (?,?,?)";
-            $conn->prepare($sql)->execute([$_POST['username'], $_POST['mail'], $mdphash]);
-            header("location:login.php");  
-        }
-    }
-    else {
-        echo "mots de passes pas identiques";
-    }
-}
-?>
 </body>

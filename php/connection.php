@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 $DB_host = "localhost";
@@ -16,4 +15,5 @@ catch(PDOException $e)
 {
      echo $e->getMessage();
 }
+require_once('fonctions.php');
 ?>
