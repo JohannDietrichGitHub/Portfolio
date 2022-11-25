@@ -19,7 +19,7 @@ require_once('connection.php');
 <div class="form_signup form-login">
     <div class="formtitle">Se connecter</div> 
     <br><br>
-    <form action="login.php" name="form" id="form" method="post">
+    <form action="connection_util.php" name="form" id="form" method="post">
     <div class="form-group">
         <label for="username">Nom d'utilisateur</label>
         <input type="text" class="form-control" id="username" name="username"  placeholder="Nom d'utilisateur" required>
@@ -33,41 +33,5 @@ require_once('connection.php');
     <div><a href="authentification.php">Pas encore de compte ?</a></div>
 </div>
 </center>
-<?php
-     $conn = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
-     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    if(isset($_POST["username"]))  
-    {          
-            $stmt = $conn->prepare("SELECT password FROM users WHERE username=?");
-            $stmt->execute([$_POST["username"]]); 
-            $passwd = $stmt->fetch();
 
-            if ($passwd !=null){
-                if (password_verify($_POST["password"], $passwd[0]))
-                {    
-                     $stmt = $conn->prepare("SELECT * FROM users WHERE username = :username"); /* permet de chercher la colone"droits" determinant si un utilisateur est administrateur ou non */
-                     $stmt->execute(['username' => $_POST["username"]]); 
-                     $user = $stmt->fetch();
-                     $droits = $user[4];
-                     $_SESSION["username"] = $_POST["username"]; /* Crée les variables de sessions permettant donc de confirmer la connection et plus */
-                     $_SESSION["droits"] = $droits;
-
-                     //creation de logs
-                     $sql = "INSERT INTO logs (username, actions, pages) VALUES (?,?,?)";
-                     $conn->prepare($sql)->execute([$_POST['username'], "Login", "login.php"]);
-
-                     header("location:articles.php");  
-                }  
-                else  
-                {  
-                     echo "Mauvais mot de passe ou nom d'utilisateur";
-                }
-            }
-            else 
-                {
-                    echo "Nom d'utilisateur inconnu";
-                }
-        } 
-
-?>
 </body>
