@@ -20,11 +20,12 @@
                 if($_SESSION["droits"] == 1){
                     ?><a class="nav-item nav-link active" href="http://localhost:3000/php/admin.php"">Admin</a><?php //permet de voir la page admin uniquement si on l'es
                 }
+                ?><a class="nav-item nav-link active" href="http://localhost:3000/php/logout.php"">Se déconnecter</a><?php //permet de voir la page admin uniquement si on l'es
             }
             else {
                 ?> <a class="nav-item nav-link active inexist" href="http://localhost:3000/php/admin.php"">admin</a> <?php //permet simplement un meilleur alignement de la navbar
+                ?> <a class="nav-item nav-link active" href="http://localhost:3000/php/login.php"">Se connecter</a> <?php //permet de se connecter uniquement si l'on ne l'es pas déjà
             }?>
-            <a class="nav-item nav-link active" href="http://localhost:3000/php/login.php"">Se connecter</a>
         </div>
         </div>
     </nav>
