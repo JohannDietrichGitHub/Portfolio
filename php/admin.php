@@ -47,12 +47,11 @@ if(isset($_SESSION["username"]))
          <br>
          <center><button type="submit" class="btn btn-primary">Modifier</button></center>
         </form>
-        <center><a href="logout.php">Se déconnecter</a></center>
     </div>
-    <div class="changeadmin">
-        <center><div class="formtitle">Modifier administrateurs</div> </center>
+<!--     <div class="changeadmin">
+        <center><div class="formtitle">Modifier administrateurs</div> </center> //test de future options
         
-    </div>
+    </div> -->
 </div>
 
 

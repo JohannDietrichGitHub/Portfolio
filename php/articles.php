@@ -15,8 +15,6 @@ require_once('connection.php');
     if(isset($_SESSION["username"]))  
  {  
       echo '<h3>connection réussie ! - '.$_SESSION["username"]. '</h3>'; 
-      echo '<a href="logout.php">Logout</a>';
-
  }
   ?>
 </header>

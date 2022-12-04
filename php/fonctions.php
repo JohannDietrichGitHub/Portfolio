@@ -53,10 +53,9 @@ function se_connecter($conn){  //fonction de connection pour login.php
                      $droits = $user[4]; //vérifiie dans la BDD si l'utilisateur a des droits administrateurs
                      $_SESSION["username"] = $_POST["username"]; /* Crée les variables de sessions permettant donc de confirmer la connection et plus */
                      $_SESSION["droits"] = $droits;
-
                      //creation de logs
-                     $sql = "INSERT INTO logs (username, actions, pages) VALUES (?,?,?)";
-                     $conn->prepare($sql)->execute([$_POST['username'], "Login", "login.php"]);
+                     $sql = "INSERT INTO logs (username, actions, pages,date_temps) VALUES (?,?,?,?)";
+                     $conn->prepare($sql)->execute([$_POST['username'], "Login", "login.php",time_now()]);
 
                      header("location:articles.php");  
                      exit;
@@ -76,8 +75,21 @@ function se_connecter($conn){  //fonction de connection pour login.php
 
 
 function logout($conn){
-    $sql = "INSERT INTO logs (username, actions, pages) VALUES (?,?,?)"; //logs de déconnection
-    $conn->prepare($sql)->execute([$_SESSION["username"], "Logout/Changement de compte", "connection.php"]);
+    $sql = "INSERT INTO logs (username, actions, pages, date_temps) VALUES (?,?,?,?)"; //logs de déconnection
+    $conn->prepare($sql)->execute([$_SESSION["username"], "Logout/Changement de compte", "connection.php",time_now()]);
     $_SESSION = array();
     session_destroy();//déconnecte l'utilisateur
+}
+
+function time_now(){ //défini le temps et la date actuel d'une connection ou déconnection
+    date_default_timezone_set('Europe/Paris');
+    $jour_Actuel=date("d");
+    $mois_Actuel=date("m");
+    $annee_Actuelle=date("Y");
+    $heure_Actuelle=date("H");
+    $minute_Actuelle=date("i");
+    $seconde_Actuelle=date("s");
+
+    return ("$annee_Actuelle-$mois_Actuel-$jour_Actuel $heure_Actuelle:$minute_Actuelle:$seconde_Actuelle");
+
 }
