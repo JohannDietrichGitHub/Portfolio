@@ -34,31 +34,42 @@ $diplomes = $user[4];
         <center><h1><label>CV</label></center></h1>
 
         <div class="cvprincipal"> 
-          <div class="premiercontainercv"> 
-            <div class="presentationgeneral"> Présentation générale :
-                <br> <?php echo $presentation;?>
+            <div class="premiercontainercv"> 
+                <div class="presentationgeneral"> Présentation générale :
+                    <br> <?php echo $presentation;?>
+                </div>
+                <div class="photo"><img src="..\images\tete.jpg" alt="moi" width="100%" height="100%"></div>
             </div>
-            <div class="photo"> Photo : </div>
-          </div>
-          <div class="deuxiemecontainercv"> 
-            <div class="contincontcv"> 
-              <div class="diplome"> Diplomes :
-                <br> <?php echo $diplomes;?>
-              </div>
-              <div class="experiences"> Experiences :
+            <div class="deuxiemecontainercv"> 
+                <div class="contincontcv"> 
+                    <div class="diplome"> Diplomes :
+                        <br> <?php echo $diplomes;?>
+                    </div>
+                    <div class="competences"> Competences : 
+                        <br> <?php echo $competences;?>
+                    </div>
+                </div>
+                <div class="reseau">Réseaux :<br><br>
+                    <a href="https://linkedin.com/in/johann-dietrich-aa3296228">Mon linkedIn</a><br><br>
+                    <a href="https://github.com/jojohub69">Mon Github</a><br><br>
+                </div>
+            </div>
+            <div class="experiences"> Experiences :
                 <br> <?php echo $experiences;?>
-              </div>
             </div>
-            <div class="reseau">Réseaux :</div>
-          </div>
-          <div class="competences"> Competences : 
-             <br> <?php echo $competences;?>
-          </div>
         </div>
-        <div class="contactezmoi">
-        <?php
-          require_once ('formtest.php');
-        ?></div>
+        <div class="contactezmoi"> 
+            <div class="form_contact">
+                <?php
+                require_once ('formtest.php');
+                ?>
+            </div>
+            <div class="download_cv">
+                <a href="DIETRICH_Johann_CV.pdf" download="DIETRICH_Johann_CV.pdf">
+                    Téléchargez mon CV !
+                </a>
+            </div>
+        </div>
         </section>
     </div>
 </body>
