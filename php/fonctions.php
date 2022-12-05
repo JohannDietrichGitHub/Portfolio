@@ -105,9 +105,9 @@ function barre_comp($competences){
         echo "<div class='progress'><div class='progress-bar' role='progressbar' style='width: $comp_pourc_language%' aria-valuenow='$comp_pourc_language' aria-valuemin='0' aria-valuemax='100'>$comp_pourc_language%</div></div>";
     }
 }
-function obtenir_article($conn){
+function obtenir_article($conn, $id_article_choisi=1){
     $stmt = $conn->prepare("SELECT * FROM articles WHERE id=?");
-    $stmt->execute([1]);
+    $stmt->execute([$id_article_choisi]);
     $infos_article = $stmt->fetch();
 
     return ([
@@ -121,4 +121,15 @@ function ajout_article($conn){
     $conn->prepare($sql)->execute([$_POST['titre'], $_POST['contenu'], $_SESSION["username"]]);
     header("location:articles.php"); 
     exit; 
+}
+
+function choisir_article($conn){
+    if (!empty($_POST)) 
+    { 
+        $idactuelle = $_POST['select'];
+        $stmt = $conn->prepare("SELECT * FROM articles WHERE id=:id");
+        $stmt->execute(['id' => $idactuelle]); 
+        $article = $stmt->fetch();
+        return $article;
+    }
 }

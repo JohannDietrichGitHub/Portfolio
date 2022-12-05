@@ -12,11 +12,39 @@ require_once('connection.php');
 <header>
   <?php
     require_once ('navbar.php');
-    $infos_article = obtenir_article($conn);
-  ?>
+    if (!empty($_POST)) 
+    {
+        $article_choisi = choisir_article($conn);
+        $infos_article = obtenir_article($conn,$article_choisi['id']);
+
+    }
+
+?>
 </header>
 <body>
+
     <center><h1><div class="premierblocktitre">Articles</div></h1></center>
+
+    <!-- partie montrant les différents articles choisissables -->
+    <div class="selection_article">
+        <label>Sélectionnez un article à voir</label>
+        <br>
+        <form class="selecticle" method="POST">
+            <select name="select" class="form-select" aria-label="Default select example">
+            <?php
+            $data = $conn->query("SELECT * FROM articles")->fetchAll();
+            foreach ($data as $row) 
+                {
+                echo "<option value=$row[id]> $row[titre] </option>";
+                }
+            ?>
+            </select>
+            <br><br><button type="submit" class="btn btn-primary">Selectionner</button>
+        </form>
+    </div>
+    <?php if(!empty($_POST)){ ?>
+    
+    <!-- Partie montrant l'article choisi -->
     <div class="main_article">
         <div class="titre_article">
         <?php echo '<h2>'.  $infos_article['titre'].'</h2>'?>
@@ -28,7 +56,10 @@ require_once('connection.php');
             </div> 
         </div>
         <div class="commentaires">
-            Ici se trouveront les commentaires
         </div>
     </div>
+    <?php }
+    else{
+        echo "<br><br><center><h2>Veuillez choisir un article à la gauche de l'écran </h2></center>";
+    } ?>
 </body>
