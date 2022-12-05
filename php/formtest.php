@@ -17,15 +17,15 @@ require_once('connection.php');
                 <br><br>
                 <form action="Index.php" name="form" id="form" method="post">
                 <div class="form-group">
-                    <label for="sujet">sujet</label>
+                    <label for="sujet">Sujet</label>
                     <input type="text" class="form-control" id="sujet" name="sujet"  placeholder="sujet" required>
                  </div>
                  <div class="form-group">
-                    <label for="mail">mail</label>
+                    <label for="mail">Mail</label>
                     <input type="mail" class="form-control" id="mail" name="mail"  placeholder="mail" required>
                  </div>
                  <div class="form-group">
-                    <label for="raison">raison</label>
+                    <label for="raison">Contenu</label>
                     <textarea class="form-control textraison" id="raison" name="raison"  required></textarea>
                  </div>
                 <button type="submit" class="btn btn-primary">Envoyer</button>

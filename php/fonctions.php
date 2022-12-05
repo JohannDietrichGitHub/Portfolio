@@ -70,7 +70,7 @@ function se_connecter($conn){  //fonction de connection pour login.php
                     echo "Nom d'utilisateur inconnu";
                 }
         } 
-    }
+}
 
 
 
@@ -103,5 +103,22 @@ function barre_comp($competences){
         $count+=1;
         echo $comp_language.":";
         echo "<div class='progress'><div class='progress-bar' role='progressbar' style='width: $comp_pourc_language%' aria-valuenow='$comp_pourc_language' aria-valuemin='0' aria-valuemax='100'>$comp_pourc_language%</div></div>";
+    }
 }
+function obtenir_article($conn){
+    $stmt = $conn->prepare("SELECT * FROM articles WHERE id=?");
+    $stmt->execute([1]);
+    $infos_article = $stmt->fetch();
+
+    return ([
+        'titre' =>$infos_article["titre"],
+        'contenu' =>$infos_article["contenu"],
+        'auteur' =>$infos_article["auteur"]
+    ]);
+}
+function ajout_article($conn){
+    $sql = "INSERT INTO articles (titre, contenu, auteur) VALUES (?,?,?)";
+    $conn->prepare($sql)->execute([$_POST['titre'], $_POST['contenu'], $_SESSION["username"]]);
+    header("location:articles.php"); 
+    exit; 
 }

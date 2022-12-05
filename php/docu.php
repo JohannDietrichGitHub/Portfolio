@@ -15,7 +15,7 @@ require_once('connection.php');
   ?>
 </header>
 <body>
-<center><h1><div class="premierblocktitre"> PROJETS !</div></h1></center>
+<center><h1><div class="premierblocktitre"> Projets !</div></h1></center>
   <div id="projetwrapper"> 
   <div class="proj proj1">
   <a href="">

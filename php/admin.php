@@ -23,7 +23,7 @@ if(isset($_SESSION["username"]))
     if($_SESSION["droits"] == 1)
     {
 ?>
-<div class="containeradmin">
+<div class="containeradmin"> <!-- formulaire pour modifier le CV -->
     <div class="form_signup form-admin">
         <center><div class="formtitle">Modifier CV</div> </center>
         <br><br>
@@ -48,10 +48,22 @@ if(isset($_SESSION["username"]))
          <center><button type="submit" class="btn btn-primary">Modifier</button></center>
         </form>
     </div>
-<!--     <div class="changeadmin">
-        <center><div class="formtitle">Modifier administrateurs</div> </center> //test de future options
-        
-    </div> -->
+    <!-- formulaire pour créer un article -->
+
+    <div class="form_signup form-article">
+        <center><div class="formtitle">Ajouter article</div></center>
+        <br><br>
+        <form action="ajout_article.php" name="form" id="form" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control" id="titre" name="titre"  placeholder="titre" required>
+         </div>
+         <div class="form-group">
+            <textarea class="form-control text_article" id="contenu" name="contenu" placeholder="contenu de l'article" required></textarea>
+         </div>
+         <br>
+         <center><button type="submit" class="btn btn-primary">Créer l'article</button></center>
+        </form>
+    </div>
 </div>
 
 

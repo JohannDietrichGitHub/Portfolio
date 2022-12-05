@@ -18,7 +18,7 @@ require_once('connection.php');
   ?>
 </header>
 <body>
-<center><h1><div class="premierblocktitre"> PORTFOLIO JOHANN DIETRICH !</div></h1></center>
+<center><h1><div class="premierblocktitre"> Portfolio johann Dietrich !</div></h1></center>
   <br>
   <section id="sec-1">
   <div class="container">

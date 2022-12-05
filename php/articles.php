@@ -12,11 +12,23 @@ require_once('connection.php');
 <header>
   <?php
     require_once ('navbar.php');
-    if(isset($_SESSION["username"]))  
- {  
-      echo '<h3>connection réussie ! - '.$_SESSION["username"]. '</h3>'; 
- }
+    $infos_article = obtenir_article($conn);
   ?>
 </header>
 <body>
+    <center><h1><div class="premierblocktitre">Articles</div></h1></center>
+    <div class="main_article">
+        <div class="titre_article">
+        <?php echo '<h2>'.  $infos_article['titre'].'</h2>'?>
+        </div>
+        <div class="contenu_article">
+            <?php echo '<h4>'.$infos_article['contenu'].'</h4>' ?> <br><br>
+            <div>
+                <?php echo '<h5>'.$infos_article['auteur'].'</h5>'?>
+            </div> 
+        </div>
+        <div class="commentaires">
+            Ici se trouveront les commentaires
+        </div>
+    </div>
 </body>
