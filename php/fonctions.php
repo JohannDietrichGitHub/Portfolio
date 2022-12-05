@@ -91,5 +91,17 @@ function time_now(){ //d√©fini le temps et la date actuel d'une connection ou d√
     $seconde_Actuelle=date("s");
 
     return ("$annee_Actuelle-$mois_Actuel-$jour_Actuel $heure_Actuelle:$minute_Actuelle:$seconde_Actuelle");
+}
 
+function barre_comp($competences){
+    $competence=explode(" ",$competences);
+    $count =0;
+    foreach ($competence as $test){
+        $comp_pourcentage=explode(";",$competence[$count]);
+        $comp_language= $comp_pourcentage[0];
+        $comp_pourc_language = $comp_pourcentage[1];
+        $count+=1;
+        echo $comp_language.":";
+        echo "<div class='progress'><div class='progress-bar' role='progressbar' style='width: $comp_pourc_language%' aria-valuenow='$comp_pourc_language' aria-valuemin='0' aria-valuemax='100'>$comp_pourc_language%</div></div>";
+}
 }

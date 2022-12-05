@@ -37,8 +37,8 @@ if(isset($_SESSION["username"]))
             <input type="text" class="form-control" id="presentation" name="presentation"  placeholder="presentation" required>
          </div>
          <div class="form-group">
-            <label for="competences">competences</label>
-            <input type="text" class="form-control" id="competences" name="competences"  placeholder="competences" required >
+            <label for="competences">competences + %</label>
+            <input type="text" class="form-control" id="competences" name="competences"  placeholder="par exemple, php;25 css;35" required >
          </div>
          <div class="form-group">
             <label for="diplomes">diplomes</label>

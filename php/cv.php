@@ -18,6 +18,9 @@ $presentation = $user[2];
 $competences = $user[3];
 $diplomes = $user[4];
 
+
+
+
 ?>
 
 
@@ -31,7 +34,7 @@ $diplomes = $user[4];
     
     <div class="reveal">
       <section id="reveal CV ">
-        <center><h1><label>CV</label></center></h1>
+        <center><h1>CV</center></h1>
 
         <div class="cvprincipal"> 
             <div class="premiercontainercv"> 
@@ -46,7 +49,7 @@ $diplomes = $user[4];
                         <br> <?php echo $diplomes;?>
                     </div>
                     <div class="competences"> Competences : 
-                        <br> <?php echo $competences;?>
+                        <br> <?php barre_comp($competences);?>
                     </div>
                 </div>
                 <div class="reseau">Réseaux :<br><br>
@@ -65,7 +68,7 @@ $diplomes = $user[4];
                 ?>
             </div>
             <div class="download_cv">
-                <a href="DIETRICH_Johann_CV.pdf" download="DIETRICH_Johann_CV.pdf">
+                <a href="../../DIETRICH_Johann_CV.pdf" download="DIETRICH_Johann_CV.pdf">
                     Téléchargez mon CV !
                 </a>
             </div>

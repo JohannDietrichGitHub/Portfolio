@@ -31,5 +31,4 @@ require_once('connection.php');
   require_once('pres.php');
   require_once('cv.php');
   ?>
-  <a href="index.php">remonter</a>
 </body>
