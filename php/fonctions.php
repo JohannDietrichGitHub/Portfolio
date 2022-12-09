@@ -54,8 +54,8 @@ function se_connecter($conn){  //fonction de connection pour login.php
                      $_SESSION["username"] = $_POST["username"]; /* Crée les variables de sessions permettant donc de confirmer la connection et plus */
                      $_SESSION["droits"] = $droits;
                      //creation de logs
-                     $sql = "INSERT INTO logs (username, actions, pages,date_temps) VALUES (?,?,?,?)";
-                     $conn->prepare($sql)->execute([$_POST['username'], "Login", "login.php",time_now()]);
+                    $sql = "INSERT INTO logs (username, actions, pages,date_temps) VALUES (?,?,?,?)";
+                    $conn->prepare($sql)->execute([$_POST['username'], "Login", "login.php",time_now()]);
 
                      header("location:articles.php");  
                      exit;
@@ -131,5 +131,34 @@ function choisir_article($conn){
         $stmt->execute(['id' => $idactuelle]); 
         $article = $stmt->fetch();
         return $article;
+    }
+}
+
+function appel_com($conn){
+    if (!empty($_POST)) {
+        $idactuelle = $_POST['select'];
+        $stmt = $conn->prepare("SELECT * FROM commentaires WHERE article_id=:id");
+        $stmt->execute(['id' => $idactuelle]); 
+        $commentaire = $stmt->fetch(); //selectionne les données du commentaire de l'article a l'id actuel
+        if (isset($commentaire) AND $commentaire!= NULL){
+            $stmt = $conn->prepare("SELECT username FROM users WHERE id=?");
+            $stmt->execute([$commentaire['user_id']]); //cherche le nom associé au commentaire 
+            $nom_util= $stmt->fetch();
+            $var = "Commentaire de ".$nom_util['username']."<br>" .$commentaire['contenu'];
+            return $var;
+        }
+        else {
+            return 'Pas encore de commentaires';
+        }
+    }
+}
+
+function ajouter_com($conn,$id_article){
+    if (!empty($_POST)) {
+        $sql = "INSERT INTO commentaires (contenu, article_id, user_id) VALUES (?,?,?)";
+        $conn->prepare($sql)->execute([$_POST['commentaire'], $id_article, $_SESSION['id']]);
+
+         header("location:articles.php");  
+         exit;
     }
 }

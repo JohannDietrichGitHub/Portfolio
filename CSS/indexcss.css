@@ -492,3 +492,17 @@ textarea {
   top: 20%;
   left: 5%;
 }
+
+
+/* Partie s'occupant des commentaires */
+.boite_de_commentaire {
+  background-color: beige;
+  border: 1px solid black;
+  width: 35%;
+  padding: 1em;
+  margin: 0 0 1em 0;
+  color: black;
+}
+.black {
+  color: black;
+}

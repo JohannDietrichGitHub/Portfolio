@@ -55,8 +55,7 @@ require_once('connection.php');
                 <?php echo '<h5>'.$infos_article['auteur'].'</h5>'?>
             </div> 
         </div>
-        <div class="commentaires">
-        </div>
+        <?php require_once("comm.php"); ?>
     </div>
     <?php }
     else{
