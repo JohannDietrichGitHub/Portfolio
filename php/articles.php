@@ -42,8 +42,10 @@ require_once('connection.php');
             <br><br><button type="submit" class="btn btn-primary">Selectionner</button>
         </form>
     </div>
-    <?php if(!empty($_POST)){ ?>
-    
+    <?php if(!empty($_POST)){ 
+            unset($_SESSION['article_id']);
+            $_SESSION['article_id'] = $infos_article['id'];
+        ?>
     <!-- Partie montrant l'article choisi -->
     <div class="main_article">
         <div class="titre_article">

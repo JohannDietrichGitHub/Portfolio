@@ -23,7 +23,4 @@ require_once('connection.php');
     <div class="boite_de_commentaire">
         <?php echo appel_com($conn);?>
     </div>
-
-
-
 </body>

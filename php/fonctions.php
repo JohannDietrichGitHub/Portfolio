@@ -53,6 +53,7 @@ function se_connecter($conn){  //fonction de connection pour login.php
                      $droits = $user[4]; //vérifiie dans la BDD si l'utilisateur a des droits administrateurs
                      $_SESSION["username"] = $_POST["username"]; /* Crée les variables de sessions permettant donc de confirmer la connection et plus */
                      $_SESSION["droits"] = $droits;
+                     $_SESSION['id'] = $user[0];
                      //creation de logs
                     $sql = "INSERT INTO logs (username, actions, pages,date_temps) VALUES (?,?,?,?)";
                     $conn->prepare($sql)->execute([$_POST['username'], "Login", "login.php",time_now()]);
@@ -111,6 +112,7 @@ function obtenir_article($conn, $id_article_choisi=1){
     $infos_article = $stmt->fetch();
 
     return ([
+        'id' =>$infos_article["id"],
         'titre' =>$infos_article["titre"],
         'contenu' =>$infos_article["contenu"],
         'auteur' =>$infos_article["auteur"]
@@ -144,7 +146,7 @@ function appel_com($conn){
             $stmt = $conn->prepare("SELECT username FROM users WHERE id=?");
             $stmt->execute([$commentaire['user_id']]); //cherche le nom associé au commentaire 
             $nom_util= $stmt->fetch();
-            $var = "Commentaire de ".$nom_util['username']."<br>" .$commentaire['contenu'];
+            $var = "Commentaire de ".$nom_util['username']." : <br>" .$commentaire['contenu'];
             return $var;
         }
         else {
