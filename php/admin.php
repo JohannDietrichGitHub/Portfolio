@@ -64,17 +64,22 @@ if(isset($_SESSION["username"]))
          <center><button type="submit" class="btn btn-primary">Créer l'article</button></center>
         </form>
     </div>
+
+    <div class="form_signup affichage_log">
+        <ul>
+            <?php
+            $stmt = $conn->prepare("SELECT * FROM logs");
+            $stmt->execute();
+            $logs = $stmt->fetchAll();
+            $logs = array_reverse($logs);
+            foreach ($logs as $logs) {
+            echo "<li>|| Utilisateur : " . $logs['username'] ." || Action : ". $logs['actions']. " || Date et heure : ".$logs['date_temps'] ." || </li>";
+            }
+            ?>
+        </ul>
+    </div>
+
 </div>
-
-
-
-
-
-
-
-
-
-
 
 
 

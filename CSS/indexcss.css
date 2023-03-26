@@ -460,7 +460,13 @@ textarea {
   overflow: auto;
   resize: none !important;
 }
-
+.affichage_log {
+  height: 200px !important; 
+  overflow: auto !important; 
+  margin: 2em 0 2em 0;
+  border: 1px solid rgb(113, 132, 166) ;
+  background-color: rgb(1, 0, 0);
+}
 
 
 /* Partie s'occupant de la page article */
