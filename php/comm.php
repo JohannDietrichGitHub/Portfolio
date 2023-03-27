@@ -20,7 +20,7 @@ require_once('connection.php');
             </form>
         <?php } else { echo "veuillez vous connecter pour mettre des commentaires"; }?>
     </div>
-    <div class="boite_de_commentaire">
+    
         <?php echo appel_com($conn);?>
-    </div>
+
 </body>

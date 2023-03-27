@@ -141,16 +141,19 @@ function appel_com($conn){
         $idactuelle = $_POST['select'];
         $stmt = $conn->prepare("SELECT * FROM commentaires WHERE article_id=:id");
         $stmt->execute(['id' => $idactuelle]); 
-        $commentaire = $stmt->fetch(); //selectionne les données du commentaire de l'article a l'id actuel
-        if (isset($commentaire) AND $commentaire!= NULL){
-            $stmt = $conn->prepare("SELECT username FROM users WHERE id=?");
-            $stmt->execute([$commentaire['user_id']]); //cherche le nom associé au commentaire 
-            $nom_util= $stmt->fetch();
-            $var = "Commentaire de ".$nom_util['username']." : <br>" .$commentaire['contenu'];
+        $commentaires = $stmt->fetchAll(); //selectionne les données de tous les commentaires de l'article a l'id actuel
+        if (!empty($commentaires)){
+            $var = "";
+            foreach ($commentaires as $commentaire){
+                $stmt = $conn->prepare("SELECT username FROM users WHERE id=?");
+                $stmt->execute([$commentaire['user_id']]); //cherche le nom associé au commentaire
+                $nom_util= $stmt->fetch();
+                $var .="<div class='boite_de_commentaire'> Commentaire de ".$nom_util['username']." : <br>".$commentaire['contenu']."</div>";
+            }
             return $var;
         }
         else {
-            return 'Pas encore de commentaires';
+            return "<div class='boite_de_commentaire'> Pas encore de commentaires </div>";
         }
     }
 }
