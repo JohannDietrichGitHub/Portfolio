@@ -1,0 +1,1 @@
+<div class="copyright">© 2022-2023 DIETRICH JOHANN PORTFOLIO </div>

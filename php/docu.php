@@ -81,13 +81,8 @@ require_once('connection.php');
     </div>
   </div>
   </a>
-  <div class="proj proj9">
   </div>
   </a>
-  <div class="proj proj10"></div>
-  <div class="proj proj11"></div>
-  <div class="proj proj12"></div>
-
   </div>
-
+ <?php require_once('footer.php');?>
 </body>

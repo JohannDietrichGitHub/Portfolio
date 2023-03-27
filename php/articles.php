@@ -42,7 +42,8 @@ require_once('connection.php');
             <br><br><button type="submit" class="btn btn-primary">Selectionner</button>
         </form>
     </div>
-    <?php if(!empty($_POST)){ 
+    <?php   
+            if(!empty($_POST)){ 
             unset($_SESSION['article_id']);
             $_SESSION['article_id'] = $infos_article['id'];
         ?>
@@ -62,5 +63,5 @@ require_once('connection.php');
     <?php }
     else{
         echo "<br><br><center><h2>Veuillez choisir un article à la gauche de l'écran </h2></center>";
-    } ?>
+    } require_once('footer.php');?>
 </body>

@@ -52,9 +52,9 @@ $diplomes = $user[4];
                         <br> <?php barre_comp($competences);?>
                     </div>
                 </div>
-                <div class="reseau">Réseaux :<br><br>
-                    <a href="https://linkedin.com/in/johann-dietrich-aa3296228">Mon linkedIn</a><br><br>
-                    <a href="https://github.com/jojohub69">Mon Github</a><br><br>
+                <div class="reseau">Mes réseaux :<br><br>
+                    <a href="https://linkedin.com/in/johann-dietrich-aa3296228"><img src="../logo-linkedIn.png" alt="linkedin" width="120px" height="30px"></a>  <br><br>
+                    <a href="https://github.com/jojohub69"><img src="../GitHub-Logo.png" alt="github" width="120px" height="60px"></a><br><br>
                 </div>
             </div>
             <div class="experiences"> Experiences :
@@ -73,6 +73,7 @@ $diplomes = $user[4];
                 </a>
             </div>
         </div>
+        <div class="copyright">© 2022-2023 DIETRICH JOHANN PORTFOLIO </div>
         </section>
     </div>
 </body>
