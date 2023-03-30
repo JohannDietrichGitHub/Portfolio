@@ -41,7 +41,7 @@ $diplomes = $user[4];
                 <div class="presentationgeneral"> Présentation générale :
                     <br> <?php echo $presentation;?>
                 </div>
-                <div class="photo"><img src="..\images\tete.jpg" alt="moi" width="100%" height="100%"></div>
+                <div class="photo"><img src="..\images\tete.jpg" alt="moi" width="140px" height="100%"></div>
             </div>
             <div class="deuxiemecontainercv"> 
                 <div class="contincontcv"> 
@@ -58,7 +58,7 @@ $diplomes = $user[4];
                 </div>
             </div>
             <div class="experiences"> Experiences :
-                <br> <?php echo $experiences;?>
+                <br> <?php echo $experiences; ?>
             </div>
         </div>
         <div class="contactezmoi"> 

@@ -83,7 +83,145 @@ if(isset($_SESSION["username"]))
 
 
 
+
+
+
+<center><div class="ajouter"><label>Ajouter un projet</label>  
+    <br><br>
+    <form action='ajouter_projet.php' class="table" method="POST">
+      <div class="form-group">
+        <label for="titre">titre</label>
+        <input type="text" class="form-control" name="titre" id="titre"  placeholder="Entrez le titre"  required> 
+      </div>
+      <div class="form-group">
+        <label for="description">description</label>
+        <input type="text" class="form-control" name="description" id="description"  placeholder="Entrez la description"  required>
+      </div>
+      <div class="form-group">
+        <label for="lien">lien</label>
+        <input type="text" class="form-control" name="lien" id="lien" placeholder="Entrez le lien" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form></div></center>
+
+
+
+
+
+
+
+
+<center><div class="ajouter"><label>Sélectionnez un projet à modifier</label>
+  <br>
+  <form class="tablemod" method="POST">
+    <select name="select" class="form-select" aria-label="Default select example">
+      <option selected>Projets </option>
+      <?php
+       $data = $conn->query("SELECT * FROM projets")->fetchAll();
+       foreach ($data as $row) 
+       {
+         echo "<option value=$row[id]> $row[titre] </option>";
+       }
+      ?>
+    </select>
+    <br><br><button type="submit" class="btn btn-primary">Selectionner</button>
+  </form></div></center>
+
+
+
+
+
+
+
+
+
+  <center><div class="ajouter">
+  <br><br>
+    <label>Sélectionnez un projet à supprimer</label>
+  <br>
+  <form action="suppr_article.php" class="tablemod" method="POST">
+    <select name="selecti" class="form-select" aria-label="Default select example">
+      <option selected>projets </option>
+      <?php
+       $data = $conn->query("SELECT * FROM projets")->fetchAll();
+       foreach ($data as $row)  
+       {
+         echo "<option value=$row[id]> $row[titre] </option>";
+       } ?>
+           </select>
+            <br><br><button type="submit" class="btn btn-primary">Supprimer</button>
+    </form>
+    </div></center> <?php
+
+?>
 <?php 
+if (isset($_POST['select'])) 
+  { 
+    $idactuelle = $_POST['select'];
+    $stmt = $conn->prepare("SELECT * FROM projets WHERE id=:id");
+    $stmt->execute(['id' => $idactuelle]); 
+    $projet = $stmt->fetch();
+    $titre = $projet['titre'];
+    $description = $projet['description'];
+    $lien = $projet['lien'];
+   ?>
+<br><br>
+    <center><label>Modifier le projet</label>  
+    <br><br>
+    <form action='modifier_projet.php' class="table" method="POST">
+    <div class="form-group">
+        <input type="text" class="form-control" name="id" id="id"   value="<?php echo $idactuelle ?>" readonly="readonly" hidden required> 
+      </div>
+      <div class="form-group">
+        <label for="titre">titre</label>
+        <input type="text" class="form-control" name="titre" id="titre"  placeholder="Entrez le titre" value="<?php echo $titre ?>" required> 
+      </div>
+      <div class="form-group">
+        <label for="description">description</label>
+        <input type="text" class="form-control" name="description" id="description"  placeholder="Entrez la description" value="<?php echo $description ?>" required>
+      </div>
+      <div class="form-group">
+        <label for="lien">lien</label>
+        <input type="text" class="form-control" name="lien" id="lien" placeholder="Entrez le lien" value="<?php echo $lien ?>" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Modifier</button>
+    </form></center>
+
+<?php } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 else { 
     ?>

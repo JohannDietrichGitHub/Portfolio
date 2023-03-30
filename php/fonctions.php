@@ -167,3 +167,33 @@ function ajouter_com($conn,$id_article){
          exit;
     }
 }
+
+function modifier_projet($conn){
+    if (!empty($_POST)) {
+        $sql = "UPDATE projets SET titre=?, description=?, lien=? WHERE id=?";
+        $stmt= $conn->prepare($sql);
+        $stmt->execute([$_POST['titre'], $_POST['description'], $_POST['lien'], $_POST['id']]);
+        header("location:docu.php");  
+        exit;
+    }
+}
+
+function ajouter_projet($conn){
+    if (!empty($_POST)) {
+        $sql = "INSERT INTO projets (titre, description, lien) VALUES (?,?,?)";
+        $conn->prepare($sql)->execute([$_POST['titre'], $_POST['description'], $_POST['lien']]);
+        header("location:docu.php");
+        exit;
+    }
+}
+
+function supprimer_projet($conn) {
+    if(isset($_POST['selecti'])){ 
+        $id_a_suprimer= $_POST['selecti'];   
+        $sql = 'DELETE FROM projets WHERE id=:id';
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(['id' => $id_a_suprimer]);
+        header("location:docu.php");
+        exit;
+   } 
+}
