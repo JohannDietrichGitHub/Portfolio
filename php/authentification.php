@@ -36,6 +36,10 @@ require_once('connection.php');
             <label for="confpassword">Confirmation du mot de passe :</label>
             <input type="password" class="form-control" id="confpassword" name="confpassword" placeholder="Confirmation de mot de passe" required>
         </div>
+        <label for="case_cochee">
+            <input type="checkbox" name="case_cochee" value="1" required> 
+            <a href="charte_info.php">J'accepte les termes et conditions de la charte informatique de ce site.</a>
+        </label>
         <button type="submit" class="btn btn-primary">Créer un compte</button>
         </form>
         <div><a href="login.php">Déja un compte ?</a></div>

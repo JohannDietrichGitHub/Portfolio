@@ -10,7 +10,6 @@ if(!empty($_POST)){   /* vérifie si le formulaire a été envoyé */
     }
     else 
     {
-        // todo : Voir pourquoi les logins ne sont pas accceptés en cas de déconnection d'un autre compte
         se_connecter($conn);//demande de la fonction de connnection
     }
 }

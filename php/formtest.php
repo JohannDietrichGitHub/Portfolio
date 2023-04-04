@@ -28,6 +28,10 @@ require_once('connection.php');
                     <label for="raison">Contenu</label>
                     <textarea class="form-control textraison" id="raison" name="raison"  required></textarea>
                  </div>
+                 <label for="case_cochee">
+                    <input type="checkbox" name="case_cochee" value="1" required> 
+                    <a href="charte_info.php">J'accepte les termes et conditions de la charte informatique de ce site.</a>
+                </label>
                 <button type="submit" class="btn btn-primary">Envoyer</button>
                 </form>
                 <div><button class="fermer">fermer</button></div>
