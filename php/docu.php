@@ -15,21 +15,74 @@ require_once('connection.php');
   ?>
 </header>
 <body>
-<?php 
-$stmt = $conn->prepare("SELECT * FROM projets");
-$stmt->execute(); 
-$projets = $stmt->fetchAll(); 
-if (!empty($projets)){
-    $var = "";
-    foreach ($projets as $projet){
-        $var .="<div class='boite_de_projet'> Titre :  ".$projet ['titre']." : <br> description : ".$projet['description']."<br> lien : <a href='". $projet['lien']."'>Voir le projet</a>
-        </div>";
-    }
-    echo $var;
-}
-else {
-  echo "pas de projets";
-}
-
-require_once('footer.php');?>
+<center><h1><div class="premierblocktitre"> Projets !</div></h1></center>
+  <div id="projetwrapper"> 
+  <div class="proj proj1">
+  <a href="">
+    <div class="containerproj">
+      <div class="imageproj"></div>
+      <center><center><div class="titreproj">Titre</div></center></center>
+    </div>
+  </div>
+  </a>
+  <div class="proj proj2">
+  <a class="nodecoration" href="">
+    <div class="containerproj">
+      <div class="imageproj"></div>
+      <center><div class="titreproj">Titre</div></center>
+    </div>
+  </div>
+  </a>
+  <div class="proj proj3">
+  <a href="">
+    <div class="containerproj">
+      <div class="imageproj"></div>
+      <center><div class="titreproj">Titre</div></center>
+    </div>
+  </div>
+  </a>
+  <div class="proj proj4">
+  <a href="">
+    <div class="containerproj">
+      <div class="imageproj"></div>
+      <center><div class="titreproj">Titre</div></center>
+    </div>
+  </div>
+  </a>
+  <div class="proj proj5">
+  <a href="">
+    <div class="containerproj">
+      <div class="imageproj"></div>
+      <center><div class="titreproj">Titre</div></center>
+    </div>
+  </div>
+  </a>
+  <div class="proj proj6">
+  <a href="">
+    <div class="containerproj">
+      <div class="imageproj"></div>
+      <center><div class="titreproj">Titre</div></center>
+    </div>
+  </div>
+  </a>
+  <div class="proj proj7">
+  <a href="">
+    <div class="containerproj">
+      <div class="imageproj"></div>
+      <center><center><div class="titreproj">Titre</div></center></center>
+    </div>
+  </div>
+  </a>
+  <div class="proj proj8">
+  <a href="">
+    <div class="containerproj">
+      <div class="imageproj"></div>
+      <center><div class="titreproj">Titre</div></center>
+    </div>
+  </div>
+  </a>
+  </div>
+  </a>
+  </div>
+ <?php require_once('footer.php');?>
 </body>

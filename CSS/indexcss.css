@@ -138,6 +138,7 @@ input, label {
 }
 .photo{
   width: 10%;
+  border: 1px solid rgb(113, 132, 166);
   margin: 0 0 0.5em 0.5em ;
 }
 .deuxiemecontainercv {
@@ -331,6 +332,7 @@ input{
 /* Test annimations de scroll */
 .imagindex{
   margin-top: 5em;
+  border: 1px solid black;
   margin-bottom: 20em;
 }
 .reveal{
@@ -524,27 +526,4 @@ textarea {
   text-align: center;
   margin-top: 100px;
   margin-bottom: -50px;
-}
-
-
-.center_paragraphe{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  margin-top: 200px;
-}
-
-
-.boite_de_projet{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 1px solid black;
-  width: 50%;
-}
-.ajouter {
-  border: 1px solid black;
 }
