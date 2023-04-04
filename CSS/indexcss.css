@@ -527,3 +527,10 @@ textarea {
   margin-top: 100px;
   margin-bottom: -50px;
 }
+.center_paragraphe{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 200px;
+}
