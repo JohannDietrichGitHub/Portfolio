@@ -2,7 +2,7 @@
     color: goldenrod;
 } 
 body {
-  background-color: rgb(65, 65, 65) !important;
+  background-image: url("../images/25694844_sl_0210121_40570_02.jpg");  
   width: 100%;
 }
 /* tout sur le modal du formulaire permettant le contact */
@@ -71,10 +71,10 @@ input, label {
   background-color: rgb(113, 132, 166) !important;
 }
 .nav-link {
-  color: white;
+  color: white !important;
 }
 .navbar-brand {
-  color: white;
+  color: white !important;
 }
 
 .inexist {
@@ -272,10 +272,45 @@ input, label {
   position: relative;
 }
 
+
+
+/* Partie pour tout les hover du site */
 .titreproj, .titreproj:hover{
   color: yellowgreen ;
   text-decoration: underline black !important;
 }
+#myBtn:hover, .nav-link:hover, .navbar-brand:hover {
+  transform: scale(1.1);
+}
+.nav-link {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 120px;
+  height: 50px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 50px;
+}
+.nav-link:hover, .navbar-brand:hover {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -15%;
+  width: 130%;
+  height: 120%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+
+
+
+
 .form_signup{
   width: 30%;
 }
@@ -288,7 +323,6 @@ font-family: 'Roboto', sans-serif;
 label, div, button {
   color: white;
   font-family: 'Roboto', sans-serif;
-
 }
 .form-login{
   margin-top: 3em;
