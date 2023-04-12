@@ -33,12 +33,12 @@ require_once('connection.php');
   <?php
     // Tableau de projets (à remplir avec des données de base de données ou autre)
     $projets = array(
-      array("titre" => "E4 - Mise en place d’une page administrateur permettant d’éditer les méta description des pages web.", "image" => "seo.jpg", "lien" => "https://projet1.com"),
-      array("titre" => "E4 - Mise en place d’un système d’affichage, d’ajout, de suppression et de modification d’articles de vente", "image" => "articles.png", "lien" => "https://projet2.com"),
-      array("titre" => "E4 - Mise en place d’un système pour les payements en ligne, dans le cas d’une boutique d’E-commerce.", "image" => "vente.PNG", "lien" => "https://projet3.com"),
-      array("titre" => "E4 - Mise en place d’un système de sauvegarde de données de manière périodique.", "image" => "BDD.jpg", "lien" => "https://projet4.com"),
-      array("titre" => "E4 - Installation et sécurisation d’un serveur web Debian.", "image" => "debian.jpg", "lien" => "https://projet5.com"),
-      array("titre" => "E4 - Création d’une page de pseudo quiz a plusieurs choix pour tester le niveau d’anglais.", "image" => "image6.jpg", "lien" => "https://projet6.com"),
+      array("titre" => "E4 - Mise en place d’une page administrateur permettant d’éditer les méta description des pages web.", "image" => "../images/seo.jpg", "lien" => "https://projet1.com"),
+      array("titre" => "E4 - Mise en place d’un système d’affichage, d’ajout, de suppression et de modification d’articles de vente", "image" => "../images/articles.png", "lien" => "https://projet2.com"),
+      array("titre" => "E4 - Mise en place d’un système pour les payements en ligne, dans le cas d’une boutique d’E-commerce.", "image" => "../images/vente.PNG", "lien" => "https://projet3.com"),
+      array("titre" => "E4 - Mise en place d’un système de sauvegarde de données de manière périodique.", "image" => "../images/BDD.jpg", "lien" => "https://projet4.com"),
+      array("titre" => "E4 - Installation et sécurisation d’un serveur web Debian.", "image" => "../images/debian.jpg", "lien" => "https://projet5.com"),
+      array("titre" => "E4 - Création d’une page de pseudo quiz a plusieurs choix pour tester le niveau d’anglais.", "image" => "../images/image6.jpg", "lien" => "https://projet6.com"),
       array("titre" => "E5 - Portfolio", "image" => "image7.jpg", "lien" => "https://projet7.com"),
       array("titre" => "E5 - Bricobrac", "image" => "image8.jpg", "lien" => "https://projet8.com"),
     );
