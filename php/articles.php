@@ -6,7 +6,7 @@ require_once('connection.php');
 	<title>Articles</title>
     <link rel="stylesheet" href="..\CSS\indexcss.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="..\JS\indexjs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <header>
@@ -22,26 +22,26 @@ require_once('connection.php');
 ?>
 </header>
 <body>
-
+<button class="btn-show-selection">Selection d'articles</button>
     <center><h1><div class="premierblocktitre">Articles</div></h1></center>
 
     <!-- partie montrant les différents articles choisissables -->
     <div class="selection_article">
-        <label>Sélectionnez un article à voir</label>
-        <br>
-        <form class="selecticle" method="POST">
-            <select name="select" class="form-select" aria-label="Default select example">
-            <?php
-            $data = $conn->query("SELECT * FROM articles")->fetchAll();
-            foreach ($data as $row) 
-                {
-                echo "<option value=$row[id]> $row[titre] </option>";
-                }
-            ?>
-            </select>
-            <br><br><button type="submit" class="btn btn-primary">Selectionner</button>
-        </form>
-    </div>
+    <label>Sélectionnez un article à voir</label>
+    <br>
+    <form class="selecticle" method="POST">
+        <select name="select" class="form-select" aria-label="Default select example">
+        <?php
+        $data = $conn->query("SELECT * FROM articles")->fetchAll();
+        foreach ($data as $row) 
+            {
+            echo "<option value=$row[id]> $row[titre] </option>";
+            }
+        ?>
+        </select>
+        <br><br><button type="submit" class="btn btn-primary">Selectionner</button>
+    </form>
+</div>
     <?php   
             if(!empty($_POST)){ 
             unset($_SESSION['article_id']);
@@ -64,4 +64,16 @@ require_once('connection.php');
     else{
         echo "<br><br><center><h2>Veuillez choisir un article à la gauche de l'écran </h2></center>";
     } include('footer.php');?>
+<script>
+    var afficher = document.getElementsByClassName("btn-show-selection")[0];
+var selecteurArticles = document.getElementsByClassName("selection_article")[0];
+
+afficher.addEventListener("click", function() {
+    if (selecteurArticles.style.display === "none") {
+        selecteurArticles.style.display = "block";
+    } else {
+        selecteurArticles.style.display = "none";
+    }
+});
+    </script>
 </body>
