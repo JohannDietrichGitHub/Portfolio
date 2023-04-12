@@ -39,7 +39,7 @@ $diplomes = $user[4];
                 <div class="presentationgeneral"> Présentation générale :
                     <br> <?php echo $presentation;?>
                 </div>
-                <div class="photo"><img src="..\images\tete.jpg" alt="moi" width="100%" height="100%"></div>
+                <div class="photo"><img src="images/tete.jpg" alt="moi" width="100%" height="100%"></div>
             </div>
             <div class="deuxiemecontainercv"> 
                 <div class="contincontcv"> 
@@ -51,8 +51,8 @@ $diplomes = $user[4];
                     </div>
                 </div>
                 <div class="reseau">Mes réseaux :<br><br>
-                    <a href="https://linkedin.com/in/johann-dietrich-aa3296228"><img src="../logo-linkedIn.png" alt="linkedin" width="120px" height="30px"></a>  <br><br>
-                    <a href="https://github.com/jojohub69"><img src="../GitHub-Logo.png" alt="github" width="120px" height="60px"></a><br><br>
+                    <a href="https://linkedin.com/in/johann-dietrich-aa3296228"><img src="images/logo-linkedIn.png" alt="linkedin" width="120px" height="30px"></a>  <br><br>
+                    <a href="https://github.com/jojohub69"><img src="images/GitHub-Logo.png" alt="github" width="120px" height="60px"></a><br><br>
                 </div>
             </div>
             <div class="experiences"> Experiences :

@@ -282,7 +282,9 @@ input, label {
 #myBtn:hover, .nav-link:hover, .navbar-brand:hover {
   transform: scale(1.1);
 }
-.nav-link {
+
+/* WORK IN PROGRESS WIP TODO */
+/* .nav-link {
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -305,7 +307,7 @@ input, label {
   border-radius: 50%;
   transform: rotate(-45deg);
   z-index: -1;
-}
+} */
 
 
 

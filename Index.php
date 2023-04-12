@@ -15,7 +15,7 @@ require_once('connection.php');
 <center><h1><div class="premierblocktitre"> Portfolio johann Dietrich !</div></h1></center>
   <br>
   <section id="sec-1">
-  <img class = "center" src="../logo-certa.png" alt="BTS SIO">
+  <img class = "center" src="images/logo-certa.png" alt="BTS SIO">
   <div class="container">
     <a href="#CV">
       <div class="scroll-downn"></div>
