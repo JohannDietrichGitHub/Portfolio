@@ -4,10 +4,8 @@ require_once('connection.php');
 <head> 		
     <meta charset="utf-8" /> <!--encodage en utf8-->
 	<title>Articles</title>
-    <link rel="stylesheet" href="..\CSS\indexcss.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-</head>
+    <?php require_once('head.php');?>
+
 
 <header>
   <?php
