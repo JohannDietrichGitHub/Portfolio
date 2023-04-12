@@ -73,7 +73,6 @@ $diplomes = $user[4];
                 </a>
             </div>
         </div>
-        <div class="copyright">© 2022-2023 DIETRICH JOHANN PORTFOLIO </div>
         </section>
     </div>
 </body>

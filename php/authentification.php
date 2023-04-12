@@ -39,10 +39,11 @@ require_once('connection.php');
         <label for="case_cochee">
             <input type="checkbox" name="case_cochee" value="1" required> 
             <a href="charte_info.php">J'accepte les termes et conditions de la charte informatique de ce site.</a>
-        </label>
+        </label><br>
         <button type="submit" class="btn btn-primary">Créer un compte</button>
         </form>
         <div><a href="login.php">Déja un compte ?</a></div>
     </div>
 </center>
+<?php include('footer.php');?>
 </body>

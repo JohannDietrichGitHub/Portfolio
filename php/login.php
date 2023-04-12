@@ -33,5 +33,5 @@ require_once('connection.php');
     <div><a href="authentification.php">Pas encore de compte ?</a></div>
 </div>
 </center>
-
+<?php include('footer.php');?>
 </body>
