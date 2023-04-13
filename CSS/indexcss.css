@@ -194,6 +194,48 @@ input, label {
 
 
 
+/*CSS pour les documentations*/
+
+.thumbnail {
+  text-align: center !important;
+}
+
+.thumbnail img {
+  max-width: 100%;
+  height: 300px; /* hauteur fixe pour les images */
+  object-fit: cover; /* pour couvrir tout le carré */
+  transition: transform 0.3s ease-in-out; /* transition pour l'effet de zoom */
+  border-radius: 15px;
+  min-width: 300px; /* fixe la largeur minimale du conteneur */
+  text-align: center; /* centre les éléments dans le conteneur */
+}
+
+.thumbnail:hover img {
+  transform: scale(1.1); /* agrandit l'image de 10% */
+}
+
+.thumbnail-hover {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.caption h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+
+
+
+
+
+
+
 /* Mise en page des projets ! */
 
 #projetwrapper {
@@ -279,35 +321,21 @@ input, label {
   color: yellowgreen ;
   text-decoration: underline black !important;
 }
-#myBtn:hover, .nav-link:hover, .navbar-brand:hover {
+#myBtn:hover {
   transform: scale(1.1);
 }
 
-/* WORK IN PROGRESS WIP TODO */
-/* .nav-link {
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-  width: 120px;
-  height: 50px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  line-height: 50px;
+@media screen and (min-width: 991px) {
+  .nav-link:hover, .navbar-brand:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(226, 175, 8);
+  }
 }
-.nav-link:hover, .navbar-brand:hover {
-  content: "";
-  position: absolute;
-  top: -10%;
-  left: -15%;
-  width: 130%;
-  height: 120%;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: rotate(-45deg);
-  z-index: -1;
-} */
+
+a {
+  text-decoration: none !important; /* enlever le soulignement */
+  outline: none !important; /* enlever le contour sur le lien actif */
+}
 
 
 
@@ -517,10 +545,11 @@ textarea {
 }
 .contenu_article{
     width: 50%;
-    border: 1px solid blue;
+    border: 1px solid rgb(113, 132, 166) ;
     align-items: center;
     display: flex;
     flex-direction: column;
+    border-radius: 15px;
 }
 .selection_article{
   padding: 1em;
@@ -540,6 +569,7 @@ textarea {
   padding: 1em;
   margin: 0 0 1em 0;
   color: black;
+  border-radius: 15px;
 }
 .black {
   color: black;
@@ -588,6 +618,7 @@ textarea {
     float: none;
     align-self: center;
     margin-bottom: 0 !important;
+    margin-left: 1em !important;
   }
   .center_paragraphe{
     display: block;

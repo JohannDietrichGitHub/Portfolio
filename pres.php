@@ -2,13 +2,6 @@
     <meta charset="utf-8" /> <!--encodage en utf8-->
 	<title>Contact</title>
   <?php require_once('head.php');?>
-
-
-<header>
-  <?php
-    require_once ('navbar.php');
-  ?>
-</header>
 <body>
 
 <div class="reveal responsivepara">

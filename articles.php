@@ -60,7 +60,7 @@ require_once('connection.php');
     </div>
     <?php }
     else{
-        echo "<br><br><center><h2>Veuillez choisir un article à la gauche de l'écran </h2></center>";
+        echo "<br><br><center><div class='white'><h2>Veuillez choisir un article à la gauche de l'écran </h2></div></center>";
     } include('footer.php');?>
 <script>
     var afficher = document.getElementsByClassName("btn-show-selection")[0];

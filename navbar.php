@@ -3,7 +3,7 @@
 
 
 <div class="assemblagenavbar">
-    <nav class="navperso navbar navbar-expand-lg navbar-secondary bg-secondary">
+    <nav class="navperso navbar navbar-expand-lg navbar-secondary bg-transparent">
     <div class="container-fluid">
     <a class="navbar-brand" href="index.php">Portfolio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

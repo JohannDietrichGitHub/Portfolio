@@ -15,23 +15,9 @@ require_once('connection.php');
 <body>
 <center><h1><div class="premierblocktitre"> Projets E4 et E5</div></h1></center>
 <br>
-<style>
-  .thumbnail img {
-    width: 100%;
-    height: 300px; /* hauteur fixe pour les images */
-    object-fit: cover; /* pour couvrir tout le carré */
-  }
-  
-  .caption h3 {
-    white-space: nowrap; /* empêche le texte de passer à la ligne */
-    overflow: hidden; /* cache le texte qui dépasse de la boîte */
-    text-overflow: ellipsis; /* affiche "..." à la fin de la chaîne de caractères */
-  }
-</style>
-
 <div class="container">
   <?php
-    // Tableau de projets (à remplir avec des données de base de données ou autre)
+    // Tableau de projets
     $projets = array(
       array("titre" => "E4 - Mise en place d’une page administrateur permettant d’éditer les méta description des pages web.", "image" => "../images/seo.jpg", "lien" => "https://projet1.com"),
       array("titre" => "E4 - Mise en place d’un système d’affichage, d’ajout, de suppression et de modification d’articles de vente", "image" => "../images/articles.png", "lien" => "https://projet2.com"),
