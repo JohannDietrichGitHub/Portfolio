@@ -392,6 +392,7 @@ label, div, button {
       hsl(0,0%,90%) 47%, 
       hsl(0,0%,78%) 53%,
       hsl(0,0%,70%)100%);
+      color: black !important;
 }
 
 
