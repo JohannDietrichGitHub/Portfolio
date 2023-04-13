@@ -32,7 +32,7 @@ require_once('connection.php');
                     <input type="checkbox" name="case_cochee" value="1" required> 
                     <a href="charte_info.php">J'accepte les termes et conditions de la charte informatique de ce site.</a>
                 </label>
-                <button type="submit" class="btn btn-primary">Envoyer</button>
+                <button type="submit" class="btn btn-form-color">Envoyer</button>
                 </form>
                 <div><button class="fermer">fermer</button></div>
             </div>
@@ -53,7 +53,7 @@ if (isset($_POST['sujet'])) {
 
 ?>
  <br>
-<button id="myBtn" class="btn btn-primary">contactez moi !</button>
+<button id="myBtn" class="btn btn-front-color">contactez moi !</button>
 <script src="..\JS\indexjs.js"></script>
 
 </body>

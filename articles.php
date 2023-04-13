@@ -37,7 +37,7 @@ require_once('connection.php');
             }
         ?>
         </select>
-        <br><br><button type="submit" class="btn btn-primary">Selectionner</button>
+        <br><br><button type="submit" class="btn btn-form-color">Selectionner</button>
     </form>
 </div>
     <?php   

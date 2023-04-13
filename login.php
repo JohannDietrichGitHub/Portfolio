@@ -28,7 +28,7 @@ require_once('connection.php');
         <label for="password">Mot de passe</label>
         <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" required>
     </div>
-    <button type="submit" class="btn btn-primary">Se connecter</button>
+    <button type="submit" class="btn btn-form-color">Se connecter</button>
     </form>
     <div><a href="authentification.php">Pas encore de compte ?</a></div>
 </div>

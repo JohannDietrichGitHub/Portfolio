@@ -40,7 +40,7 @@ require_once('connection.php');
             <input type="checkbox" name="case_cochee" value="1" required> 
             <a href="charte_info.php">J'accepte les termes et conditions de la charte informatique de ce site.</a>
         </label><br>
-        <button type="submit" class="btn btn-primary">Créer un compte</button>
+        <button type="submit" class="btn btn-form-color">Créer un compte</button>
         </form>
         <div><a href="login.php">Déja un compte ?</a></div>
     </div>
