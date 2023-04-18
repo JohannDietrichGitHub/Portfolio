@@ -47,7 +47,7 @@ $diplomes = $user[4];
                 ?>
             </div>
             <div class="download_cv">
-                <a href="../../DIETRICH_Johann_CV.pdf" download="DIETRICH_Johann_CV.pdf">
+                <a href="docs/DIETRICHJohann_CV.pdf">
                     Téléchargez mon CV !
                 </a>
             </div>

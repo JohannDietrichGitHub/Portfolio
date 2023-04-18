@@ -15,7 +15,7 @@ require_once('connection.php');
             <div class="form_signup form-login">
                 <div>Si vous voulez me contacter, veuillez insérer les informations demandées ci-dessous et je vous joindrais aussi rapidement que possible !</div> 
                 <br><br>
-                <form action="Index.php" name="form" id="form" method="post">
+                <form action="index.php" name="form" id="form" method="post">
                 <div class="form-group">
                     <label for="sujet">Sujet</label>
                     <input type="text" class="form-control" id="sujet" name="sujet"  placeholder="sujet" required>

@@ -19,11 +19,11 @@ require_once('connection.php');
   <?php
     // Tableau de projets
     $projets = array(
-      array("titre" => "E4 - Mise en place d’une page administrateur permettant d’éditer les méta description des pages web.", "image" => "../images/seo.jpg", "lien" => "docs\E4 - Mise en place d’une page administrateur permettant d’éditer les méta description des pages web..pdf"),
-      array("titre" => "E4 - Mise en place d’un système d’affichage, d’ajout, de suppression et de modification d’articles de vente", "image" => "../images/articles.PNG", "lien" => "docs\E4-Mise_en_place_d’un_système_d’affichage,_d’ajout,_de_suppression_et_de_modification_d’articles_de_vente.pdf"),
-      array("titre" => "E4 - Mise en place d’un système pour les payements en ligne, dans le cas d’une boutique d’E-commerce.", "image" => "../images/vente.PNG", "lien" => "https://projet3.com"),
-      array("titre" => "E4 - Mise en place d’un système de sauvegarde de données de manière périodique.", "image" => "../images/BDD.jpg", "lien" => "https://projet4.com"),
-      array("titre" => "E4 - Installation et sécurisation d’un serveur web Debian.", "image" => "../images/debian.jpg", "lien" => "https://projet5.com"),
+      array("titre" => "E4 - Mise en place d’une page administrateur permettant d’éditer les méta description des pages web.", "image" => "/images/seo.jpg", "lien" => "docs/E4 - Mise en place d’une page administrateur permettant d’éditer les méta description des pages web..pdf"),
+      array("titre" => "E4 - Mise en place d’un système d’affichage, d’ajout, de suppression et de modification d’articles de vente", "image" => "/images/articles.PNG", "lien" => "docs\E4-Mise_en_place_d’un_système_d’affichage,_d’ajout,_de_suppression_et_de_modification_d’articles_de_vente.pdf"),
+      array("titre" => "E4 - Mise en place d’un système pour les payements en ligne, dans le cas d’une boutique d’E-commerce.", "image" => "/images/vente.PNG", "lien" => "docs\E4 - Mise en place d’un système pour les payements en ligne, dans le cas d’une boutique d’E-commerce.pdf"),
+      array("titre" => "E4 - Mise en place d’un système de sauvegarde de données de manière périodique.", "image" => "/images/BDD.jpg", "lien" => "https://projet4.com"),
+      array("titre" => "E4 - Installation et sécurisation d’un serveur web Debian.", "image" => "/images/debian.jpg", "lien" => "docs/E4 - Installation et sécurisation d’un serveur web Debian. .pdf"),
       array("titre" => "E4 - Création d’une page de pseudo quiz a plusieurs choix pour tester le niveau d’anglais.", "image" => "/images/quiz.png", "lien" => "https://projet6.com"),
       array("titre" => "E5 - Portfolio", "image" => "images/portfolio.png", "lien" => "https://projet7.com"),
       array("titre" => "E5 - Bricobrac", "image" => "/images/bricobrac.png", "lien" => "https://projet8.com"),

@@ -329,6 +329,7 @@ input, label {
   .nav-link:hover, .navbar-brand:hover {
     border-radius: 50%;
     box-shadow: 0 0 0 3px rgb(226, 175, 8);
+    border-radius: 10px;
   }
 }
 
