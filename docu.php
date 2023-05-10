@@ -26,7 +26,7 @@ require_once('connection.php');
       array("titre" => "E4 - Installation et sécurisation d’un serveur web Debian.", "image" => "/images/debian.jpg", "lien" => "docs\E4 - Installation et sécurisation d’un serveur web Debian.pdf"),
       array("titre" => "E4 - Création d’une page de pseudo quiz a plusieurs choix pour tester le niveau d’anglais.", "image" => "/images/quiz.png", "lien" => "docs\E4 - Création d’une page de pseudo quiz a plusieurs choix pour tester le niveau d’anglais.pdf"),
       array("titre" => "E4 - Portfolio", "image" => "images/portfolio.png", "lien" => "docs\E5 PORTFOLIO.pdf"),
-      array("titre" => "E4 - Veille technologique", "image" => "/images/veille.png", "lien" => ""),
+      array("titre" => "E4 - Veille technologique", "image" => "/images/veille.png", "lien" => "docs\E4-Veille_technologique_Framework_dans_le_marche.pdf"),
     );
     
     // Boucle pour afficher chaque projet dans une case cliquable
