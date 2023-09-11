@@ -21,7 +21,9 @@ function creeruncompte($conn){ //fonction de création de compte appelée sur au
 
         if($_POST['password']== $_POST['confpassword']){ /* vérifie si les mots de passes sont les memes */
             if ($_POST['username']== $usernamebdd || $_POST['mail']== $mailbdd) {  /* vérifie si le nom d'utilisateur ou l'adresse mail ne sont pas déja utilisés */
-                echo "nom d'utilisateur ou adresse mail déja utilisés";
+                $_SESSION["message_erreur"] = 'nom d\'utilisateur ou adresse mail déja utilisés';
+                header("location:authentification.php");  
+                exit;
             }
             else {
                 $mdphash = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -32,7 +34,9 @@ function creeruncompte($conn){ //fonction de création de compte appelée sur au
             }
         }
         else {
-            echo "mots de passes pas identiques";
+            $_SESSION["message_erreur"] = 'Les mots de passes indiqués ne sont pas identiques';
+            header("location:authentification.php");  
+            exit;        
         }
     }
 }
@@ -63,12 +67,16 @@ function se_connecter($conn){  //fonction de connection pour login.php
                 }  
                 else  
                 {  
-                     echo "Mauvais mot de passe ou nom d'utilisateur";
+                    $_SESSION["message_erreur"] = 'mot de passe ou nom d\'utilisateur inconnu';
+                    header("location:login.php");  
+                    exit;
                 }
             }
             else 
                 {
-                    echo "Nom d'utilisateur inconnu";
+                    $_SESSION["message_erreur"] = 'nom d\'utilisateur inconnu';
+                    header("location:login.php");  
+                    exit;
                 }
         } 
 }
@@ -158,12 +166,14 @@ function appel_com($conn){
     }
 }
 
-function ajouter_com($conn,$id_article){
+function ajouter_com($conn, $id_article){
     if (!empty($_POST)) {
+        $contenu_commentaire = htmlspecialchars($_POST['commentaire'], ENT_QUOTES, 'UTF-8');
+        
         $sql = "INSERT INTO commentaires (contenu, article_id, user_id) VALUES (?,?,?)";
-        $conn->prepare($sql)->execute([$_POST['commentaire'], $id_article, $_SESSION['id']]);
+        $conn->prepare($sql)->execute([$contenu_commentaire, $id_article, $_SESSION['id']]);
 
-         header("location:articles.php");  
-         exit;
+        header("location: articles.php");
+        exit;
     }
 }

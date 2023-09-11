@@ -344,6 +344,13 @@ a {
 
 .form_signup{
   width: 30%;
+  text-align: center; 
+}
+.center_form{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 0; 
 }
 .formtitle{
   color: white;
@@ -360,7 +367,6 @@ label, div, button {
   border: 1px solid rgb(113, 132, 166) ;
   background-color: rgb(1, 0, 0);
 }
-
 
 
 
